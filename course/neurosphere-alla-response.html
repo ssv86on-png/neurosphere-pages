@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>НейроСфера — Ответ на запрос Аллы | Обучение ИИ с нуля до своих AI-агентов</title>
+<title>НейроСфера — ответ на запрос | Обучение ИИ для бизнеса</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -77,15 +77,6 @@
   .card h3 { font-size: 15px; font-weight: 600; color: #e2e8f0; margin-bottom: 6px; margin-top: 0; }
   .card p { font-size: 13px; color: #94a3b8; margin: 0; }
 
-  .badge {
-    display: inline-block; padding: 2px 10px; border-radius: 12px;
-    font-size: 12px; font-weight: 600;
-  }
-  .badge-green { background: rgba(34,197,94,0.12); color: #4ade80; }
-  .badge-blue { background: rgba(99,102,241,0.12); color: #818cf8; }
-  .badge-amber { background: rgba(251,191,36,0.12); color: #fbbf24; }
-  .badge-purple { background: rgba(168,85,247,0.12); color: #c084fc; }
-
   .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
   .tech-badge {
     display: inline-flex; align-items: center; gap: 5px;
@@ -126,24 +117,6 @@
   .level-card .level-title { font-weight: 600; color: #818cf8; font-size: 14px; }
   .level-card p { font-size: 13px; color: #94a3b8; margin-top: 4px; margin-bottom: 0; }
 
-  .timeline { position: relative; padding-left: 24px; }
-  .timeline::before {
-    content: '';
-    position: absolute; left: 6px; top: 8px; bottom: 8px;
-    width: 2px; background: rgba(99,102,241,0.2);
-  }
-  .timeline-item {
-    position: relative; margin-bottom: 16px; padding-left: 16px;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute; left: -22px; top: 6px;
-    width: 10px; height: 10px; background: #6366f1; border-radius: 50%;
-    border: 2px solid #12121a;
-  }
-  .timeline-item .week { font-weight: 600; color: #818cf8; font-size: 13px; }
-  .timeline-item p { margin-bottom: 2px; font-size: 14px; color: #c0c8d8; }
-
   .cta-block {
     text-align: center; padding: 32px;
     background: linear-gradient(135deg, #1e1b4b, #1a1a2e);
@@ -157,6 +130,16 @@
   }
   .footer strong { color: #94a3b8; }
 
+  blockquote {
+    border-left: 3px solid #6366f1;
+    padding: 12px 20px;
+    margin: 16px 0;
+    background: rgba(99,102,241,0.04);
+    border-radius: 0 12px 12px 0;
+    color: #a5b4fc;
+    font-style: italic;
+  }
+
   @media (max-width: 600px) {
     .grid-2, .grid-3, .result-grid { grid-template-columns: 1fr; }
     .header h1 { font-size: 22px; }
@@ -167,140 +150,151 @@
 <div class="container">
 
   <div class="header">
-    <div class="greeting">Здравствуйте, Алла!</div>
+    <div class="greeting">Здравствуйте!</div>
     <h1>🧠 НейроСфера</h1>
-    <div class="greeting" style="color: #a5b4fc;">Спасибо за развёрнутый запрос — подробно отвечу на каждый пункт.</div>
+    <div class="greeting">Спасибо за развёрнутый запрос — это как раз наш профиль, подробно отвечу на каждый пункт.</div>
     <div>
       <span class="label">🎓 Диплом МГРИ (ФИС ФРДО)</span>
-      <span class="label">🏛 Очно в МГРИ / Онлайн live</span>
-      <span class="label">🤖 Свои AI-агенты</span>
+      <span class="label">🏛 Очно / Онлайн live</span>
+      <span class="label">🤖 AI-агенты под бизнес</span>
     </div>
   </div>
 
-  <!-- О подходе -->
+  <!-- О НЕЙРОСФЕРЕ -->
   <div class="section">
     <h2><span class="icon">🎯</span> О НейроСфере и нашем подходе</h2>
-    <p>Мы учим работать с ИИ на практике: от контекст-инжиниринга и автоматизации до создания AI-агентов для бизнеса. Вы визуально видите, <strong>в каких нейронках и чему учитесь, на каких движках и что кодите, с чем выходите из обучения.</strong></p>
+    <p>Мы учим работать с ИИ на практике: от контекст-инжиниринга и автоматизации до создания AI-агентов для бизнеса.</p>
 
     <h3><span class="icon">🔌</span> Какие нейросети используем</h3>
+    <ul>
+      <li><strong>DeepSeek, ChatGPT, Claude, Kimi, Groq</strong> — западные</li>
+      <li>Наши агенты работают на <strong>Гермесе (Hermes), OpenRouter, Codex</strong> и уже на русских связках — отечественных моделях и API</li>
+    </ul>
+
     <div class="tech-stack">
       <span class="tech-badge">🔵 DeepSeek</span>
-      <span class="tech-badge">🟢 ChatGPT / OpenAI</span>
-      <span class="tech-badge">🟣 Claude (Anthropic)</span>
+      <span class="tech-badge">🟢 ChatGPT</span>
+      <span class="tech-badge">🟣 Claude</span>
       <span class="tech-badge">🟡 Kimi</span>
       <span class="tech-badge">⚡ Groq</span>
       <span class="tech-badge">🟠 Hermes Agent</span>
-      <span class="tech-badge">🔗 OpenRouter (200+)</span>
+      <span class="tech-badge">🔗 OpenRouter</span>
       <span class="tech-badge">📦 Codex</span>
-      <span class="tech-badge">🇷🇺 GigaChat / YandexGPT</span>
-      <span class="tech-badge">🎨 Midjourney / DALL·E / Flux</span>
+      <span class="tech-badge">🇷🇺 GigaChat</span>
+      <span class="tech-badge">🇷🇺 YandexGPT</span>
     </div>
 
     <h3><span class="icon">📖</span> Чему учимся</h3>
     <ul>
       <li><strong>Контекст-инжиниринг</strong> — правильная постановка задач для ИИ</li>
-      <li><strong>Создание AI-агентов</strong> под конкретные бизнес-задачи (на Hermes, OpenRouter, Codex)</li>
+      <li><strong>Создание AI-агентов</strong> под конкретные бизнес-задачи</li>
       <li><strong>Автоматизация рабочих процессов</strong> через связки нейросетей</li>
-      <li><strong>Промпт-инжиниринг</strong> на разных платформах и моделях</li>
-      <li><strong>Программирование нейросетей</strong> — от Python до своих моделей</li>
+      <li><strong>Промпт-инжиниринг</strong> на разных платформах</li>
+    </ul>
+
+    <h3><span class="icon">⌨️</span> Что кодим</h3>
+    <ul>
+      <li><strong>Python</strong> для интеграций и автоматизации</li>
+      <li><strong>Работа с API</strong> нейросетей</li>
+      <li><strong>Сборка агентов</strong> на OpenRouter, Codex, Hermes</li>
     </ul>
   </div>
 
-  <!-- Промптинг -->
+  <!-- ПРОМПТ-ИНЖИНИРИНГ -->
   <div class="section">
     <h2><span class="icon">💬</span> Промпт-инжиниринг — глубокое изучение</h2>
-    <p>Отдельный блок программы. Вы научитесь писать промпты, которые дают предсказуемый результат на любой модели:</p>
+    <p>Отдельный, детально проработанный блок программы. Научитесь писать промпты, которые дают предсказуемый результат на любой модели:</p>
 
     <div class="grid-3">
       <div class="card">
         <span class="card-icon">🎯</span>
-        <h3>Базовый уровень</h3>
-        <p>Структура промпта, роль, контекст, формат ответа. Chain-of-Thought, Few-shot. Работа с системным промптом.</p>
+        <h3>Базовый</h3>
+        <p>Структура промпта, роль, контекст. Chain-of-Thought, Few-shot. Системный промпт. Температура, top-p.</p>
       </div>
       <div class="card">
         <span class="card-icon">⚡</span>
         <h3>Продвинутый</h3>
-        <p>Мультишаговые цепочки, Self-Consistency, Tree-of-Thoughts. Роутинг между моделями. Контроль температуры, top-p, frequency penalty.</p>
+        <p>Мультишаговые цепочки, Self-Consistency, Tree-of-Thoughts. Роутинг между моделями. Промпт-фабрики.</p>
       </div>
       <div class="card">
         <span class="card-icon">🤖</span>
-        <h3>В бою</h3>
-        <p>Промпты для агентов. Функциональные промпты (tool use). Защита от инъекций. A/B тестирование промптов. Промпт-фабрики.</p>
+        <h3>Боевой</h3>
+        <p>Промпты для агентов (tool use). Защита от инъекций. A/B тестирование. Промпты для функций и код-генерации.</p>
       </div>
     </div>
   </div>
 
-  <!-- Программирование нейросетей — 10 уровней -->
+  <!-- ПРОГРАММИРОВАНИЕ НЕЙРОСЕТЕЙ 10 УРОВНЕЙ -->
   <div class="section">
     <h2><span class="icon">💻</span> Программирование нейросетей — 10 уровней</h2>
-    <p>Полный трек: от первого скрипта на Python до собственной нейросетевой архитектуры.</p>
+    <p>Полный трек: от первого скрипта на Python до собственной архитектуры, продакшена и развёртывания.</p>
 
     <div class="level-card">
       <div class="level-title">🔰 Уровень 1 — Python для ИИ</div>
-      <p>Основы Python: переменные, функции, классы. NumPy, Pandas для работы с данными. Jupyter Notebooks.</p>
+      <p>Основы Python. NumPy, Pandas. Jupyter Notebooks. Первые скрипты.</p>
     </div>
     <div class="level-card" style="border-left-color: #34d399;">
-      <div class="level-title">📊 Уровень 2 — Работа с данными</div>
-      <p>Загрузка, очистка, визуализация данных. Matplotlib, Seaborn. Подготовка датасетов для обучения.</p>
+      <div class="level-title">📊 Уровень 2 — Обработка данных</div>
+      <p>Загрузка, очистка, визуализация. Matplotlib, Seaborn. Датасеты для обучения.</p>
     </div>
     <div class="level-card" style="border-left-color: #60a5fa;">
-      <div class="level-title">🧮 Уровень 3 — Линейная алгебра для нейросетей</div>
-      <p>Матрицы, векторы, градиенты. Производные и обратное распространение ошибки. Визуализация графов вычислений.</p>
+      <div class="level-title">🧮 Уровень 3 — Математика нейросетей</div>
+      <p>Матрицы, градиенты, обратное распространение. Графы вычислений.</p>
     </div>
     <div class="level-card" style="border-left-color: #a78bfa;">
-      <div class="level-title">🏗 Уровень 4 — Основы нейросетей с нуля</div>
-      <p>Написание нейрона, слоя, функции активации на чистом Python и NumPy. Перцептрон, сигмоида, ReLU.</p>
+      <div class="level-title">🏗 Уровень 4 — Нейросети с нуля</div>
+      <p>Нейрон, слой, функция активации на чистом Python + NumPy. Перцептрон.</p>
     </div>
     <div class="level-card" style="border-left-color: #f472b6;">
-      <div class="level-title">⚙️ Уровень 5 — PyTorch / TensorFlow</div>
-      <p>Тензоры, автоград, модули. Сборка и обучение полносвязных сетей. Dataset, DataLoader, оптимизаторы.</p>
+      <div class="level-title">⚙️ Уровень 5 — PyTorch</div>
+      <p>Тензоры, автоград, модули. Сборка и обучение. Dataset, оптимизаторы.</p>
     </div>
     <div class="level-card" style="border-left-color: #fb923c;">
       <div class="level-title">🖼 Уровень 6 — Свёрточные сети (CNN)</div>
-      <p>Архитектуры: LeNet, ResNet, EfficientNet. Классификация изображений, Transfer Learning, Fine-tuning. Работа с GPU.</p>
+      <p>LeNet, ResNet. Классификация, Transfer Learning. GPU.</p>
     </div>
     <div class="level-card" style="border-left-color: #22d3ee;">
-      <div class="level-title">🔤 Уровень 7 — NLP и Transformers</div>
-      <p>Токенизация, эмбеддинги, Attention. HuggingFace Transformers: BERT, GPT, T5. Fine-tuning LLM под свою задачу.</p>
+      <div class="level-title">🔤 Уровень 7 — NLP / Transformers</div>
+      <p>Токенизация, Attention. HuggingFace. Fine-tuning LLM.</p>
     </div>
     <div class="level-card" style="border-left-color: #e879f9;">
       <div class="level-title">🎨 Уровень 8 — Генеративные модели</div>
-      <p>Diffusion models: Stable Diffusion, LoRA, ControlNet. GANs. Генерация изображений, видео, музыки. Коммерческое применение.</p>
+      <p>Stable Diffusion, LoRA, ControlNet. Генерация контента.</p>
     </div>
     <div class="level-card" style="border-left-color: #fbbf24;">
-      <div class="level-title">🔗 Уровень 9 — RAG и Multi-Agent системы</div>
-      <p>LangChain, LlamaIndex. Retrieval-Augmented Generation. Chroma, FAISS. Мульти-агентные архитектуры: планировщики, супервизоры, специализированные агенты.</p>
+      <div class="level-title">🔗 Уровень 9 — RAG + Multi-Agent</div>
+      <p>LangChain, Chroma, FAISS. Агенты-планировщики, супервизоры.</p>
     </div>
     <div class="level-card" style="border-left-color: #ef4444;">
-      <div class="level-title">🚀 Уровень 10 — Продакшн и развёртывание</div>
-      <p>Docker, FastAPI, ONNX. Квантизация (GGUF, GPTQ). vLLM, llama.cpp. Мониторинг, A/B тесты, CI/CD для ML. Развёртывание на VPS, Vercel, Cloudflare.</p>
+      <div class="level-title">🚀 Уровень 10 — Продакшн</div>
+      <p>Docker, FastAPI, ONNX. Квантизация (GGUF). vLLM. VPS/Vercel.</p>
     </div>
   </div>
 
-  <!-- Результат -->
+  <!-- РЕЗУЛЬТАТ -->
   <div class="section">
     <h2><span class="icon">✅</span> С чем выходите после обучения</h2>
     <div class="result-grid">
       <div class="result-item">
         <span class="emoji">🤖</span>
-        <p><strong>Свой AI-агент</strong><br>под ваши рабочие задачи</p>
+        <p><strong>Свой готовый AI-агент</strong> под ваши рабочие задачи</p>
       </div>
       <div class="result-item">
         <span class="emoji">💡</span>
-        <p><strong>Понимание как работают</strong><br>нейросети изнутри</p>
+        <p><strong>Понимание, как внедрить</strong> ИИ в бизнес</p>
       </div>
       <div class="result-item">
         <span class="emoji">⏱️</span>
-        <p><strong>Экономия до 10 часов</strong><br>в неделю на рутине</p>
+        <p><strong>Экономия до 10 часов</strong> в неделю на рутине</p>
       </div>
       <div class="result-item">
         <span class="emoji">🎓</span>
-        <p><strong>Удостоверение МГРИ</strong><br>гособразца (ФИС ФРДО)</p>
+        <p><strong>Удостоверение МГРИ</strong> гособразца (ФИС ФРДО)</p>
       </div>
     </div>
   </div>
 
-  <!-- Стоимость -->
+  <!-- ОПЛАТА -->
   <div class="section">
     <h2><span class="icon">💳</span> Оплата и доп расходы</h2>
     <div class="price-block">
@@ -313,26 +307,26 @@
         <span>✅ Рассрочка</span>
       </div>
     </div>
-    <p style="margin-top: 16px;"><strong>Никаких доп расходов.</strong> Доступы ко всем нейросетям, материалы, раздатки, диплом — всё входит в стоимость.</p>
+    <p style="margin-top: 16px;"><strong>Никаких доп расходов.</strong> Материалы, раздатки, доступы к нейросетям, диплом — всё входит в стоимость.</p>
   </div>
 
-  <!-- Диплом -->
+  <!-- ДОКУМЕНТ -->
   <div class="section">
     <h2><span class="icon">📜</span> Документ об окончании</h2>
     <p>После успешного завершения — <strong>удостоверение о повышении квалификации</strong> установленного образца, диплом вуза <strong>МГРИ</strong>, вносится в федеральный реестр <strong>ФИС ФРДО</strong>.</p>
     <p>Официальный документ, признаваемый работодателями и госорганами.</p>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-block">
-    <h2 style="justify-content: center; color: #f1f5f9; margin-bottom: 8px;"><span class="icon">📩</span> Готовы ответить на любые вопросы</h2>
-    <p>Напишите — расскажем подробнее о программе, формате или запишем на пробный урок.</p>
+  <!-- ГОТОВ ОТВЕТИТЬ -->
+  <div class="section">
+    <h2><span class="icon">💬</span> Готов ответить на любые уточнения</h2>
+    <p>По программе, формату, стоимости или содержанию — пишите, расскажу детальнее.</p>
   </div>
 
   <div class="footer">
     <strong>НейроСфера</strong> — профессиональное образование по нейросетям и ИИ для бизнеса<br>
-    Совместная программа с <strong>МГРИ</strong> (Российский государственный геологоразведочный университет)<br>
-    neurosphere.group • © 2026
+    Совместная программа с <strong>МГРИ</strong><br>
+    © 2026 — neurosphere.group
   </div>
 
 </div>
