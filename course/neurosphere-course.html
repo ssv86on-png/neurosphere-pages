@@ -15,7 +15,6 @@
   }
   .container { max-width: 820px; margin: 0 auto; padding: 40px 24px; }
 
-  /* Header */
   .header {
     text-align: center;
     margin-bottom: 48px;
@@ -29,173 +28,88 @@
   .header::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -50%; left: -50%; width: 200%; height: 200%;
     background: radial-gradient(circle at 30% 50%, rgba(99,102,241,0.08) 0%, transparent 50%);
     pointer-events: none;
   }
   .header h1 {
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 28px; font-weight: 800;
     background: linear-gradient(135deg, #818cf8, #6366f1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 12px;
-    position: relative;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 12px; position: relative;
   }
-  .header .subtitle {
-    color: #94a3b8;
-    font-size: 16px;
-    position: relative;
-  }
+  .header .subtitle { color: #94a3b8; font-size: 16px; position: relative; }
   .header .label {
-    display: inline-block;
-    background: rgba(99,102,241,0.15);
-    color: #818cf8;
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: 12px;
-    border: 1px solid rgba(99,102,241,0.2);
+    display: inline-block; background: rgba(99,102,241,0.15); color: #818cf8;
+    padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    margin-top: 12px; border: 1px solid rgba(99,102,241,0.2);
   }
 
-  /* Section */
   .section {
-    margin-bottom: 36px;
-    padding: 28px;
-    background: #12121a;
-    border-radius: 16px;
+    margin-bottom: 36px; padding: 28px;
+    background: #12121a; border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.05);
   }
   .section h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #f1f5f9;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 20px; font-weight: 700; color: #f1f5f9;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
   }
   .section h2 .icon { font-size: 22px; }
   .section p { color: #c0c8d8; margin-bottom: 12px; font-size: 15px; }
   .section ul { padding-left: 20px; margin-bottom: 12px; }
   .section li { color: #c0c8d8; margin-bottom: 8px; font-size: 14px; }
 
-  /* Grid cards */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .card {
-    padding: 20px;
-    background: #181825;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.04);
-    transition: border-color 0.3s;
+    padding: 20px; background: #181825; border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.04); transition: border-color 0.3s;
   }
   .card:hover { border-color: rgba(99,102,241,0.2); }
   .card .card-icon { font-size: 28px; margin-bottom: 8px; }
   .card h3 { font-size: 15px; font-weight: 600; color: #e2e8f0; margin-bottom: 6px; }
   .card p { font-size: 13px; color: #94a3b8; margin: 0; }
 
-  /* Tech stack */
-  .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-  }
+  .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
   .tech-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    background: rgba(99,102,241,0.08);
-    border: 1px solid rgba(99,102,241,0.12);
-    border-radius: 20px;
-    font-size: 13px;
-    color: #a5b4fc;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 14px; background: rgba(99,102,241,0.08);
+    border: 1px solid rgba(99,102,241,0.12); border-radius: 20px;
+    font-size: 13px; color: #a5b4fc;
   }
 
-  /* Price block */
   .price-block {
-    text-align: center;
-    padding: 32px;
+    text-align: center; padding: 32px;
     background: linear-gradient(135deg, #1e1b4b, #0f3460);
-    border-radius: 16px;
-    border: 1px solid rgba(99,102,241,0.15);
+    border-radius: 16px; border: 1px solid rgba(99,102,241,0.15);
   }
-  .price-block .price {
-    font-size: 42px;
-    font-weight: 800;
-    color: #fff;
-  }
-  .price-block .price-sub {
-    color: #94a3b8;
-    font-size: 14px;
-    margin-top: 4px;
-  }
+  .price-block .price { font-size: 42px; font-weight: 800; color: #fff; }
+  .price-block .price-sub { color: #94a3b8; font-size: 14px; margin-top: 4px; }
   .price-block .payment-options {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 16px;
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px;
   }
   .price-block .payment-options span {
-    padding: 6px 16px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 20px;
-    font-size: 13px;
-    color: #a5b4fc;
+    padding: 6px 16px; background: rgba(255,255,255,0.06);
+    border-radius: 20px; font-size: 13px; color: #a5b4fc;
   }
 
-  /* Timeline */
-  .timeline { position: relative; padding-left: 24px; }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background: rgba(99,102,241,0.2);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 16px;
-    padding-left: 16px;
-  }
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -22px;
-    top: 6px;
-    width: 10px;
-    height: 10px;
-    background: #6366f1;
-    border-radius: 50%;
-    border: 2px solid #12121a;
-  }
-  .timeline-item .week { font-weight: 600; color: #818cf8; font-size: 13px; }
-  .timeline-item p { margin-bottom: 2px; }
-
-  /* Footer */
-  .footer {
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .result-item {
+    padding: 16px; background: rgba(99,102,241,0.06);
+    border-radius: 10px; border: 1px solid rgba(99,102,241,0.08);
     text-align: center;
-    padding: 32px;
-    color: #64748b;
-    font-size: 13px;
-    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .result-item .emoji { font-size: 28px; margin-bottom: 6px; display: block; }
+  .result-item p { font-size: 13px; margin: 0; }
+
+  .footer {
+    text-align: center; padding: 32px; color: #64748b;
+    font-size: 13px; border-top: 1px solid rgba(255,255,255,0.04);
   }
   .footer strong { color: #94a3b8; }
 
   @media (max-width: 600px) {
     .grid-2 { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr 1fr; }
     .header h1 { font-size: 22px; }
   }
 </style>
@@ -203,109 +117,71 @@
 <body>
 <div class="container">
 
-  <!-- Header -->
   <div class="header">
     <h1>🧠 НейроСфера</h1>
     <div class="subtitle">Профессиональное образование по нейросетям и ИИ для бизнеса</div>
-    <div class="label">Совместно с МГРИ — диплом государственного образца</div>
+    <div class="label">Диплом МГРИ — гособразца (ФИС ФРДО)</div>
   </div>
 
   <!-- Intro -->
   <div class="section">
     <h2><span class="icon">👋</span> Здравствуйте!</h2>
-    <p>Спасибо за интерес к нашему курсу. Вы совершенно правы — теория без практики мало что даёт. Мы построили обучение так, чтобы вы <strong>видели, трогали и пробовали</strong> каждую нейросеть, каждый движок и каждый инструмент своими руками.</p>
-    <p>Ниже — подробный разбор программы, стека технологий, формата и финансовых условий.</p>
+    <p>Спасибо за развёрнутый запрос — это как раз наш профиль, подробно отвечу на каждый пункт.</p>
   </div>
 
-  <!-- Program Overview -->
+  <!-- Approach -->
   <div class="section">
-    <h2><span class="icon">📋</span> О программе</h2>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-icon">📅</div>
-        <h3>Длительность</h3>
-        <p>2 месяца (108 часов)</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📍</div>
-        <h3>Формат</h3>
-        <p>Очно в МГРИ или онлайн (живые лекции)</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🎓</div>
-        <h3>Диплом</h3>
-        <p>Удостоверение о повышении квалификации — диплом ВУЗа МГРИ, вносится в ФИС ФРДО</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">👥</div>
-        <h3>Группы</h3>
-        <p>До 12 человек — каждому уделяем внимание</p>
-      </div>
-    </div>
-  </div>
+    <h2><span class="icon">🎯</span> О НейроСфере и нашем подходе</h2>
+    <p>Мы учим работать с ИИ на практике: от контекст-инжиниринга и автоматизации до создания AI-агентов для бизнеса.</p>
 
-  <!-- What you'll learn -->
-  <div class="section">
-    <h2><span class="icon">🔬</span> Что вы изучите</h2>
-    <p>Курс разбит на 4 недели интенсивной практики. Вы пройдёте путь от первых промптов до полноценного бизнес-агента:</p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="week">Неделя 1 — Основы и инструменты</div>
-        <p>Отличие нейросетей от традиционного программирования. <strong>ChatGPT, Claude, DeepSeek, GigaChat</strong> — как выбирать модель под задачу. Промпт-инжиниринг: от простых запросов до многошаговых цепочек. Разбор архитектуры Transformer: что происходит «под капотом».</p>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Неделя 2 — Генерация контента</div>
-        <p>Текст: автогенерация статей, писем, сценариев, код-ревью. <strong>Изображения: Midjourney, DALL·E, Stable Diffusion, Flux</strong> — как получить предсказуемый результат. Аудио и видео: озвучка, клонирование голоса, генерация видео по тексту. Разбор бизнес-кейсов.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Неделя 3 — Свои агенты и API</div>
-        <p>Создание Telegram-бота на нейросетях. OpenRouter: как получить доступ к 200+ моделям. <strong>Автономные агенты</strong>: настройка агентов, которые сами планируют и выполняют задачи. ИИ-помощники для отдела продаж, поддержки, маркетинга. RAG: база знаний для нейросети.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="week">Неделя 4 — Внедрение в бизнес</div>
-        <p>Выбор стека под реальную задачу. <strong>Развёртывание на VPS, Docker, Vercel.</strong> Безопасность, стоимость, SLA. Итоговый проект: полноценный ИИ-агент для вашего бизнеса под руководством преподавателя. Финальная защита.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Tech Stack -->
-  <div class="section">
-    <h2><span class="icon">⚙️</span> Технологический стек</h2>
-    <p>Вы будете работать с реальными движками и инструментами, которые используют компании — от стартапов до enterprise:</p>
+    <h3 style="color: #e2e8f0; font-size: 15px; margin: 16px 0 8px;">Какие нейросети используем:</h3>
     <div class="tech-stack">
-      <span class="tech-badge">🔥 ChatGPT / OpenAI API</span>
-      <span class="tech-badge">🟣 Claude (Anthropic)</span>
       <span class="tech-badge">🔵 DeepSeek</span>
-      <span class="tech-badge">🟢 GigaChat / YandexGPT</span>
-      <span class="tech-badge">🎨 Midjourney</span>
-      <span class="tech-badge">🖼 DALL·E 3</span>
-      <span class="tech-badge">🌌 Stable Diffusion</span>
-      <span class="tech-badge">⚡ Flux</span>
-      <span class="tech-badge">🤖 AutoGPT / Agent frameworks</span>
-      <span class="tech-badge">📦 Docker / VPS</span>
-      <span class="tech-badge">🌐 Vercel / Next.js</span>
-      <span class="tech-badge">🗄 RAG / LangChain</span>
-      <span class="tech-badge">📊 OpenRouter</span>
-      <span class="tech-badge">🐍 Python / API</span>
-      <span class="tech-badge">📱 Telegram Bot API</span>
+      <span class="tech-badge">🟢 ChatGPT</span>
+      <span class="tech-badge">🟣 Claude</span>
+      <span class="tech-badge">🟡 Kimi</span>
+      <span class="tech-badge">⚡ Groq</span>
+      <span class="tech-badge">🟠 Hermes Agent</span>
+      <span class="tech-badge">🔗 OpenRouter</span>
+      <span class="tech-badge">📦 Codex</span>
+      <span class="tech-badge">🇷🇺 Отечественные модели</span>
     </div>
-    <p style="margin-top: 16px; color: #94a3b8; font-size: 13px;">✳️ Каждая нейросеть — с доступом на время обучения. Вы не просто смотрите лекции, а пишете код делаете реальные интеграции.</p>
+
+    <h3 style="color: #e2e8f0; font-size: 15px; margin: 16px 0 8px;">Чему учимся:</h3>
+    <ul>
+      <li><strong>Контекст-инжиниринг</strong> — правильная постановка задач для ИИ</li>
+      <li><strong>Создание AI-агентов</strong> под конкретные бизнес-задачи</li>
+      <li><strong>Автоматизация рабочих процессов</strong> через связки нейросетей</li>
+      <li><strong>Промпт-инжиниринг</strong> на разных платформах</li>
+    </ul>
+
+    <h3 style="color: #e2e8f0; font-size: 15px; margin: 16px 0 8px;">Что кодим:</h3>
+    <ul>
+      <li><strong>Python</strong> для интеграций и автоматизации</li>
+      <li><strong>Работа с API</strong> нейросетей</li>
+      <li><strong>Сборка агентов</strong> на OpenRouter, Codex, Hermes</li>
+    </ul>
   </div>
 
-  <!-- Format -->
+  <!-- Results -->
   <div class="section">
-    <h2><span class="icon">🎯</span> Формат обучения</h2>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-icon">🏛️</div>
-        <h3>Очно (МГРИ)</h3>
-        <p>Москва, м. Беляево. Полное погружение, общение с преподавателем и группой, живой нетворкинг.</p>
+    <h2><span class="icon">✅</span> С чем выходите после обучения</h2>
+    <div class="result-grid">
+      <div class="result-item">
+        <span class="emoji">🤖</span>
+        <p><strong>Свой AI-агент</strong><br>под ваши рабочие задачи</p>
       </div>
-      <div class="card">
-        <div class="card-icon">💻</div>
-        <h3>Онлайн (live)</h3>
-        <p>Живые лекции и практика в реальном времени. Запись — доступна. Можно задать вопрос голосом.</p>
+      <div class="result-item">
+        <span class="emoji">💡</span>
+        <p><strong>Понимание внедрения</strong><br>ИИ в бизнес</p>
+      </div>
+      <div class="result-item">
+        <span class="emoji">⏱️</span>
+        <p><strong>Экономия до 10 часов</strong><br>в неделю на рутине</p>
+      </div>
+      <div class="result-item">
+        <span class="emoji">🎓</span>
+        <p><strong>Удостоверение МГРИ</strong><br>гособразца (ФИС ФРДО)</p>
       </div>
     </div>
   </div>
@@ -315,7 +191,7 @@
     <h2><span class="icon">💳</span> Стоимость и оплата</h2>
     <div class="price-block">
       <div class="price">64 800 ₽</div>
-      <div class="price-sub">за полный курс (108 часов, 2 месяца)</div>
+      <div class="price-sub">всё включено — полный курс, 2 месяца, 108 часов</div>
       <div class="payment-options">
         <span>✅ Наличные</span>
         <span>✅ Безналичный расчёт</span>
@@ -323,38 +199,18 @@
         <span>✅ Рассрочка (уточняйте)</span>
       </div>
     </div>
-
-    <p style="margin-top: 16px; font-size: 14px;"><strong>Дополнительных расходов нет.</strong> Все доступы к нейросетям, инструменты и материалы включены в стоимость курса. Единственное — если занимаетесь очно в МГРИ, проезд и питание за свой счёт.</p>
+    <p style="margin-top: 16px"><strong>Никаких допрасходов.</strong> Материалы, раздатки, доступы к нейросетям, диплом — всё входит в стоимость.</p>
   </div>
 
-  <!-- Document -->
-  <div class="section">
-    <h2><span class="icon">📜</span> Документ об окончании</h2>
-    <p>После успешного завершения вы получаете <strong>удостоверение о повышении квалификации</strong> установленного образца — диплом вуза МГРИ, который вносится в федеральный реестр <strong>ФИС ФРДО</strong>.</p>
-    <p>Это официальный документ, признаваемый работодателями и государственными органами.</p>
-  </div>
-
-  <!-- Why us -->
-  <div class="section">
-    <h2><span class="icon">🏆</span> Почему выбирают НейроСферу</h2>
-    <ul>
-      <li><strong>Преподаватели — практики</strong> с опытом внедрения ИИ в реальный бизнес (а не «теоретики» с кафедры)</li>
-      <li><strong>Государственный диплом</strong> МГРИ — вы получаете официальный документ, а не «сертификат о прослушивании»</li>
-      <li><strong>Доступ к тому, что скрывают:</strong> реальные кейсы, подводные камни внедрения, внутренние методички</li>
-      <li><strong>Поддержка после курса:</strong> чат с преподавателями, обновления материалов, помощь с внедрением</li>
-      <li><strong>Живые проекты:</strong> выпускники уходят с готовым ИИ-инструментом для своего бизнеса</li>
-    </ul>
-  </div>
-
-  <!-- Help -->
+  <!-- CTA -->
   <div class="section" style="text-align: center;">
-    <h2 style="justify-content: center;"><span class="icon">❓</span> Остались вопросы?</h2>
-    <p style="color: #94a3b8;">Напишите нам — ответим по любым деталям программы, формата или условий.</p>
+    <h2 style="justify-content: center;"><span class="icon">📩</span> Готов ответить на любые уточнения</h2>
+    <p style="color: #94a3b8;">Напишите — расскажем подробнее о программе, формате или условиях.</p>
   </div>
 
   <div class="footer">
-    <strong>НейроСфера</strong> — профессиональное образование по нейросетям и искусственному интеллекту для бизнеса<br>
-    Совместная программа с <strong>МГРИ</strong> (Российский государственный геологоразведочный университет)<br>
+    <strong>НейроСфера</strong> — профессиональное образование по нейросетям и ИИ для бизнеса<br>
+    Совместная программа с <strong>МГРИ</strong><br>
     © 2026 — neurosphere.group
   </div>
 
