@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO-План продвижения сайта — Месяц 1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 24px;
+    padding: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(79,172,254,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .header h1 {
+    font-size: 2.8em;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .header .subtitle {
+    font-size: 1.2em;
+    color: #8899b0;
+    position: relative;
+  }
+  .header .badge {
+    display: inline-block;
+    background: rgba(79,172,254,0.15);
+    border: 1px solid rgba(79,172,254,0.3);
+    color: #4facfe;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.85em;
+    margin-top: 16px;
+    font-weight: 500;
+  }
+
+  /* Week cards */
+  .week { margin-bottom: 32px; }
+  .week-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #2a3a5c;
+    border-radius: 16px;
+    padding: 20px 28px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .week-number {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.3em;
+    color: #0a0a0f;
+    flex-shrink: 0;
+  }
+  .week-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #f0f0f0;
+  }
+  .week-subtitle {
+    font-size: 0.9em;
+    color: #7e8ba3;
+    margin-left: auto;
+  }
+
+  /* Day cards */
+  .day-card {
+    background: #13131f;
+    border: 1px solid #1e1e32;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+  }
+  .day-card:hover {
+    border-color: #2a3a5c;
+  }
+  .day-card .day-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .day-num {
+    background: #1e293b;
+    color: #7e8ba3;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    flex-shrink: 0;
+  }
+  .day-seeding .day-num {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+  }
+  .day-content { flex: 1; }
+  .day-title {
+    font-weight: 600;
+    color: #f0f0f0;
+    font-size: 1.05em;
+    margin-bottom: 4px;
+  }
+  .day-desc {
+    color: #8899b0;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+  }
+  .day-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .tool-tag {
+    background: rgba(79,172,254,0.1);
+    border: 1px solid rgba(79,172,254,0.2);
+    color: #4facfe;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+  .checklist-tag {
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.2);
+    color: #22c55e;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+  .seeding-tag {
+    background: rgba(255,193,7,0.1);
+    border: 1px solid rgba(255,193,7,0.2);
+    color: #ffc107;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+
+  /* Results table */
+  .results {
+    background: #13131f;
+    border: 1px solid #1e1e32;
+    border-radius: 16px;
+    padding: 28px;
+    margin-top: 40px;
+  }
+  .results h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+  }
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #1a1a2e;
+    border-radius: 10px;
+  }
+  .result-label { color: #7e8ba3; font-size: 0.9em; }
+  .result-value { font-weight: 700; color: #4facfe; font-size: 1.1em; }
+
+  /* Weak spots */
+  .weakspots {
+    background: rgba(255, 87, 87, 0.05);
+    border: 1px solid rgba(255, 87, 87, 0.15);
+    border-radius: 16px;
+    padding: 28px;
+    margin-top: 24px;
+  }
+  .weakspots h2 {
+    font-size: 1.3em;
+    color: #ff5757;
+    margin-bottom: 16px;
+  }
+  .weak-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: rgba(255,87,87,0.03);
+    border-radius: 10px;
+  }
+  .weak-issue { font-weight: 600; color: #ff5757; min-width: 120px; font-size: 0.9em; }
+  .weak-risk { color: #ffcc00; font-size: 0.85em; min-width: 80px; }
+  .weak-solution { color: #22c55e; font-size: 0.85em; }
+
+  @media (max-width: 640px) {
+    .header h1 { font-size: 1.8em; }
+    .header { padding: 28px 20px; }
+    .result-grid { grid-template-columns: 1fr; }
+    .week-header { flex-wrap: wrap; }
+    .week-subtitle { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>🚀 SEO-План продвижения</h1>
+    <div class="subtitle">Полная автоматизация SEO с нуля — результат в 1-й месяц</div>
+    <div class="badge">📅 28 дней · 28 задач · 6 волн посева</div>
+  </div>
+
+  <!-- WEAK SPOTS (mini) -->
+  <div class="weakspots">
+    <h2>⚠️ Учтённые риски и слабые места</h2>
+    <div class="weak-item">
+      <span class="weak-issue">Google Sandbox</span>
+      <span class="weak-risk">Высокий</span>
+      <span class="weak-solution">Посев с 1-го дня, крауд, форумы, быстрая индексация</span>
+    </div>
+    <div class="weak-item">
+      <span class="weak-issue">Нет бюджета</span>
+      <span class="weak-risk">Средний</span>
+      <span class="weak-solution">Заменить PBN на крауд, VC.ru, взаимный обмен</span>
+    </div>
+    <div class="weak-item">
+      <span class="weak-issue">Геозависимость</span>
+      <span class="weak-risk">Средний</span>
+      <span class="weak-solution">10 отзывов на картах к концу 2-й недели</span>
+    </div>
+    <div class="weak-item">
+      <span class="weak-issue">Уникальность</span>
+      <span class="weak-risk">Средний</span>
+      <span class="weak-solution">95%+ уникальность, экспертный взгляд</span>
+    </div>
+  </div>
+
+  <!-- WEEKS -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-number">1</div>
+      <div class="week-title">База + Техника</div>
+      <div class="week-subtitle">Дни 1–7</div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">1</div>
+        <div class="day-content">
+          <div class="day-title">Технический аудит и исправление ошибок</div>
+          <div class="day-desc">robots.txt, XML sitemap, canonical, редиректы, SSL, HSTS, favicon, og:image</div>
+          <div class="day-tools"><span class="tool-tag">Screaming Frog</span><span class="tool-tag">PageSpeed</span><span class="tool-tag">GSC</span><span class="checklist-tag">✅ 0 ошибок</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">2</div>
+        <div class="day-content">
+          <div class="day-title">Настройка Search Console + Яндекс.Вебмастер + Bing</div>
+          <div class="day-desc">Добавить сайт, загрузить sitemap, проверить индексацию</div>
+          <div class="day-tools"><span class="tool-tag">GSC</span><span class="tool-tag">Яндекс.Вебмастер</span><span class="tool-tag">Bing WMT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">3</div>
+        <div class="day-content">
+          <div class="day-title">Семантическое ядро — топ-50 запросов</div>
+          <div class="day-desc">20 коммерческих + 20 информационных + 10 навигационных. Группировка по кластерам</div>
+          <div class="day-tools"><span class="tool-tag">Wordstat</span><span class="tool-tag">KeyCollector</span><span class="tool-tag">AnswerThePublic</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">4</div>
+        <div class="day-content">
+          <div class="day-title">Создание URL-сетки сайта</div>
+          <div class="day-desc">Структура: категории → подкатегории → страницы. Глубина ≤ 3 ур. 20-30 страниц</div>
+          <div class="day-tools"><span class="tool-tag">MindMap</span><span class="tool-tag">Excalidraw</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">5</div>
+        <div class="day-content">
+          <div class="day-title">Meta-теги: Title + Description для 10 страниц</div>
+          <div class="day-desc">Title ≤ 60 символов, Description ≤ 160. Формула: Ключ + УТП + Город</div>
+          <div class="day-tools"><span class="checklist-tag">🎯 CTR &gt; 3%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">6</div>
+        <div class="day-content">
+          <div class="day-title">Schema.org разметка JSON-LD</div>
+          <div class="day-desc">Organization, LocalBusiness, BreadcrumbList, Article. Валидация без ошибок</div>
+          <div class="day-tools"><span class="tool-tag">Schema Validator</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">7</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 1 — каталоги + карты + форумы</div>
+          <div class="day-desc">20 каталогов (2GIS, Zoon, Flamp), Яндекс.Карты, Google Maps. 5 экспертных постов на форумах</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span><span class="checklist-tag">10+ ссылок</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-number">2</div>
+      <div class="week-title">Контент + Посев</div>
+      <div class="week-subtitle">Дни 8–14</div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">8</div>
+        <div class="day-content">
+          <div class="day-title">Экспертная статья 2 000+ слов</div>
+          <div class="day-desc">По главному коммерческому запросу. H1, H2, таблицы, списки, CTA. Уникальность 95%+</div>
+          <div class="day-tools"><span class="checklist-tag">⏱ 4+ мин чтения</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">9</div>
+        <div class="day-content">
+          <div class="day-title">Оптимизация изображений: WebP, lazy loading, alt-text</div>
+          <div class="day-desc">Все изображения → WebP, &lt; 100 КБ. Lazy loading. Alt-text с ключами</div>
+          <div class="day-tools"><span class="tool-tag">Squoosh</span><span class="tool-tag">TinyPNG</span><span class="checklist-tag">Mobile &gt; 75</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">10</div>
+        <div class="day-content">
+          <div class="day-title">Внутренняя перелинковка</div>
+          <div class="day-desc">Контекстные анкоры, хлебные крошки, похожие записи. Каждая страница ≥ 2 входящих ссылок</div>
+          <div class="day-tools"><span class="tool-tag">Ahrefs</span><span class="tool-tag">Screaming Frog</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">11</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 2 — отзывы + крауд-маркетинг</div>
+          <div class="day-desc">10 отзывов на Яндекс.Карты / 2GIS / Google Maps + 5 отзывов на irecommend/otzovik + 5 форумных ответов</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">12</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Гостевой пост на сайте DR 20+</div>
+          <div class="day-desc">Публикация на тематическом сайте (бюджет $20-50 или бартер). 1 dofollow-ссылка</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span><span class="tool-tag">PBN</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">13</div>
+        <div class="day-content">
+          <div class="day-title">2 статьи блога по 1 500+ слов</div>
+          <div class="day-desc">По информационным запросам. FAQ-блоки для rich snippets. Индексация за 24ч</div>
+          <div class="day-tools"><span class="checklist-tag">📖 Инфо-запросы</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">14</div>
+        <div class="day-content">
+          <div class="day-title">Анализ конкурентов (топ-3)</div>
+          <div class="day-desc">Ссылочный профиль: Ahrefs / Serpstat. Чего нет у нас — план на неделю 3</div>
+          <div class="day-tools"><span class="tool-tag">Ahrefs</span><span class="tool-tag">Serpstat</span><span class="tool-tag">SimilarWeb</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-number">3</div>
+      <div class="week-title">Рост + Автоматизация</div>
+      <div class="week-subtitle">Дни 15–21</div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">15</div>
+        <div class="day-content">
+          <div class="day-title">Google Analytics 4 + цели конверсий</div>
+          <div class="day-desc">Установка GA4, цели: просмотр, форма, звонок, время на сайте</div>
+          <div class="day-tools"><span class="tool-tag">GA4</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">16</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 3 — PBN / биржи ссылок (5 ссылок)</div>
+          <div class="day-desc">GetGoodLinks / Sape / LinkExchange. Вечные ссылки, разнообразные анкоры</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span><span class="tool-tag">$50-100</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">17</div>
+        <div class="day-content">
+          <div class="day-title">Кластеризация запросов + LSI-фразы</div>
+          <div class="day-desc">Добавить LSI на страницы. Каждая коммерческая страница → 3-5 запросов</div>
+          <div class="day-tools"><span class="tool-tag">LSI Graph</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">18</div>
+        <div class="day-content">
+          <div class="day-title">FAQ-блоки со schema.org на 5 страницах</div>
+          <div class="day-desc">Вопрос → ответ (40-60 слов). Расширенные сниппеты в выдаче</div>
+          <div class="day-tools"><span class="checklist-tag">⭐ Rich snippets</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">19</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 4 — соцсигналы + TG/Pinterest</div>
+          <div class="day-desc">10 постов VK + Telegram-каналы. 5 пинов Pinterest. Минимум 50 визитов из соцсетей</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">20</div>
+        <div class="day-content">
+          <div class="day-title">Яндекс.Директ — тест 3 000₽ / 7 дней</div>
+          <div class="day-desc">10 коммерческих запросов. Сбор данных: CTR, конверсия, CPC. Корректировка SEO</div>
+          <div class="day-tools"><span class="tool-tag">Яндекс.Директ</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">21</div>
+        <div class="day-content">
+          <div class="day-title">Аудит Core Web Vitals</div>
+          <div class="day-desc">LCP &lt; 2.5s, FID &lt; 100ms, CLS &lt; 0.1. Кеширование, CDN, сжатие</div>
+          <div class="day-tools"><span class="tool-tag">PageSpeed</span><span class="checklist-tag">Mobile &gt; 70</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 4 -->
+  <div class="week">
+    <div class="week-header">
+      <div class="week-number">4</div>
+      <div class="week-title">Ускорение + Результат</div>
+      <div class="week-subtitle">Дни 22–28</div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">22</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 5 — пресс-релиз</div>
+          <div class="day-desc">Публикация на новостном портале (NewsMoscow, PR-CY). Индексация в Яндекс.Новости</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">23</div>
+        <div class="day-content">
+          <div class="day-title">Cross-sell + похожие товары/услуги</div>
+          <div class="day-desc">Блоки перелинковки «Похожие», «С этим заказывают». Время на сайте +20%</div>
+          <div class="day-tools"><span class="checklist-tag">⏱ +20% время</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">24</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Партнёрский обмен ссылками</div>
+          <div class="day-desc">3 взаимные ссылки с тематическими сайтами</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card day-seeding">
+      <div class="day-top">
+        <div class="day-num">25</div>
+        <div class="day-content">
+          <div class="day-title">🚀 Посев 6 — VC.ru / Habr</div>
+          <div class="day-desc">Кейс/экспертная статья. 300+ просмотров, 10+ комментариев, dofollow</div>
+          <div class="day-tools"><span class="seeding-tag">⚡ Посев</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">26</div>
+        <div class="day-content">
+          <div class="day-title">Проверка индексации + Request Indexing</div>
+          <div class="day-desc">GSC → URL Inspection → Request Indexing для неиндексированных. Цель: 90%+ в индексе</div>
+          <div class="day-tools"><span class="tool-tag">GSC</span><span class="checklist-tag">90%+</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-top">
+        <div class="day-num">27</div>
+        <div class="day-content">
+          <div class="day-title">Чистка 404 + 301 редиректы</div>
+          <div class="day-desc">Screaming Frog → найти битые, настроить 301 на релевантные. 0 битых ссылок</div>
+          <div class="day-tools"><span class="tool-tag">Screaming Frog</span><span class="checklist-tag">0 ошибок</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card" style="border-color: rgba(79,172,254,0.3);">
+      <div class="day-top">
+        <div class="day-num" style="background:rgba(79,172,254,0.2);color:#4facfe;">🏆</div>
+        <div class="day-content">
+          <div class="day-title">Итоговый замер + отчёт</div>
+          <div class="day-desc">Позиции по сем.ядру, индексация, бэклинки, трафик, конверсии</div>
+          <div class="day-tools"><span class="checklist-tag">10+ запросов топ-30</span><span class="checklist-tag">50+ ссылок</span><span class="checklist-tag">Первые посетители</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results">
+    <h2>📊 Ожидаемый результат — Месяц 1</h2>
+    <div class="result-grid">
+      <div class="result-item"><span class="result-label">Проиндексировано</span><span class="result-value">90%+</span></div>
+      <div class="result-item"><span class="result-label">Бэклинков всего</span><span class="result-value">50+</span></div>
+      <div class="result-item"><span class="result-label">Dofollow ссылок</span><span class="result-value">15+</span></div>
+      <div class="result-item"><span class="result-label">Запросы топ-10</span><span class="result-value">3-5</span></div>
+      <div class="result-item"><span class="result-label">Запросы топ-30</span><span class="result-value">10-15</span></div>
+      <div class="result-item"><span class="result-label">Орг. трафик</span><span class="result-value">100-300</span></div>
+      <div class="result-item"><span class="result-label">Просмотры</span><span class="result-value">500+</span></div>
+      <div class="result-item"><span class="result-label">Конверсии</span><span class="result-value">3-10</span></div>
+      <div class="result-item"><span class="result-label">Mobile Speed</span><span class="result-value">&gt; 70</span></div>
+      <div class="result-item"><span class="result-label">Desktop Speed</span><span class="result-value">&gt; 90</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
