@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стратегия развития НейроСфера + Отчёт</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e0e0e0; line-height: 1.7; }
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #818cf8, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+h2 { font-size: 1.5rem; font-weight: 700; color: #818cf8; margin-top: 48px; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #1e1e2e; }
+h3 { font-size: 1.15rem; font-weight: 600; color: #a5b4fc; margin-top: 28px; margin-bottom: 12px; }
+.subtitle { color: #888; font-size: 1rem; margin-bottom: 36px; }
+.card { background: #181825; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #2a2a3a; }
+.card-title { font-weight: 600; font-size: 1.05rem; color: #c4b5fd; margin-bottom: 8px; }
+.tag { display: inline-block; background: #1e1b4b; color: #a5b4fc; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; margin-right: 4px; }
+.metric { display: inline-block; background: #065f46; color: #6ee7b7; padding: 2px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+.metric-red { background: #7f1d1d; color: #fca5a5; }
+.metric-yellow { background: #713f12; color: #fcd34d; }
+.metric-blue { background: #1e3a5f; color: #93c5fd; }
+.gradient-bar { height: 4px; background: linear-gradient(90deg, #6366f1, #818cf8, #a78bfa); border-radius: 2px; margin: 24px 0; }
+.section-icon { margin-right: 8px; }
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 8px; }
+p { margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+th { background: #1e1b4b; color: #a5b4fc; padding: 10px 12px; text-align: left; font-weight: 600; }
+td { padding: 10px 12px; border-bottom: 1px solid #1e1e2e; }
+tr:nth-child(even) td { background: #14141f; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.status-green { color: #6ee7b7; }
+.status-yellow { color: #fcd34d; }
+.status-red { color: #fca5a5; }
+.blockquote { border-left: 3px solid #6366f1; padding: 12px 16px; margin: 16px 0; background: #111122; border-radius: 0 8px 8px 0; font-style: italic; color: #c4b5fd; }
+.header-section { text-align: center; padding: 60px 0 40px; }
+.header-section .subtitle { color: #888; max-width: 600px; margin: 12px auto 0; }
+.phase-card { border-left: 4px solid; padding-left: 20px; margin-bottom: 24px; }
+.phase-card.phase1 { border-color: #6366f1; }
+.phase-card.phase2 { border-color: #8b5cf6; }
+.phase-card.phase3 { border-color: #a78bfa; }
+.phase-card.phase4 { border-color: #c4b5fd; }
+@media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } h1 { font-size: 1.8rem; } .container { padding: 20px 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header-section">
+  <h1>🧠 НейроСфера</h1>
+  <p class="subtitle">Стратегия развития — 2026 · Полный отчёт о проделанной работе ·<br>План согласования с руководством (РИ)</p>
+  <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+    <span class="metric">Дата: июнь 2026</span>
+    <span class="metric-blue">Диплом гос. образца</span>
+    <span class="metric">Партнёр: МГРИ</span>
+    <span class="metric-blue">Топ-28 по трудоустройству</span>
+  </div>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 1: ОТЧЁТ О ПРОДЕЛАННОЙ РАБОТЕ ========== -->
+<h2>📋 Часть 1. Отчёт о проделанной работе</h2>
+<p style="color: #888;">За период: апрель — май 2026 · Исполнитель: Ольга (операционный директор) + команда</p>
+
+<h3>🔷 1. Анализ целевой аудитории</h3>
+<div class="card">
+  <div class="card-title">Сегменты ЦА по 3 программам</div>
+  <p>Выделены сегменты для каждой программы. Кастдевы не проведены (нет клиентов для опросов). Сегменты выделены на основе анализа конкурентов, данных нейросетей, мозговых штурмов и личной аналитики.</p>
+  <ul>
+    <li><strong>Программа 1 (Нейро Хит):</strong> бизнес-пользователи, маркетологи, предприниматели — 3-4 сегмента</li>
+    <li><strong>Программа 2 (ДПО):</strong> IT-специалисты, аналитики, менеджеры по внедрению — 3 сегмента</li>
+    <li><strong>Программа 3 (госслужащие):</strong> госслужащие, муниципальные работники, руководители — 2-3 сегмента</li>
+  </ul>
+  <p><span class="tag">Выполнено</span> Собраны данные Wordstat, комментарии с форумов, данные по ЦА и ИИ из СМИ, опрос в Telegram-канале</p>
+</div>
+
+<h3>🔷 2. Анализ конкурентов</h3>
+<div class="card">
+  <div class="card-title">Конкурентная среда</div>
+  <p>Составлена таблица анализа конкурентов включающая:</p>
+  <ul>
+    <li>Сводная информация по конкурентам</li>
+    <li>Анализ соцсетей (VK, Telegram, Instagram)</li>
+    <li>Анализ сайтов, привлечения и удержания клиентов</li>
+    <li>Анализ системы продаж и продукта</li>
+    <li>Выявление наших преимуществ</li>
+    <li>Программы конкурентов — детальный разбор</li>
+  </ul>
+  <p><span class="tag">Выполнено</span> Google-таблица анализа + Документ «Программы конкурентов»</p>
+</div>
+
+<h3>🔷 3. Позиционирование и УТП</h3>
+<div class="card">
+  <div class="card-title">Отстройка от конкурентов</div>
+  <ul>
+    <li>Сформированы преимущества и УТП на основе анализа ЦА и конкурентов</li>
+    <li>Проанализированы преимущества конкурентов</li>
+  </ul>
+  <p><strong>Ключевые отличия НейроСферы:</strong></p>
+  <ul>
+    <li>🎓 Диплом МГРИ гос. образца (ФИС ФРДО)</li>
+    <li>🤖 Context Engineering — главный навык 2026 (эволюция промпт-инжиниринга)</li>
+    <li>⚡ Практика с первого дня — реальные бизнес-кейсы с ROI</li>
+    <li>🏆 Топ-28 по трудоустройству (МГРИ)</li>
+    <li>📜 Образовательная лицензия получена</li>
+  </ul>
+</div>
+
+<h3>🔷 4. Продуктовая линейка</h3>
+<div class="card">
+  <div class="card-title">4 программы запущены</div>
+  <table>
+    <tr><th>Программа</th><th>Часы</th><th>Цена</th><th>Старт</th><th>Документ</th></tr>
+    <tr><td>🏆 ПК «Нейро Хит»</td><td>108 ч</td><td>64 800 ₽</td><td>01.06.2026 🔥</td><td>Удостоверение</td></tr>
+    <tr><td>🏆 ДПО «Специалист по разработке ИИ»</td><td>312 ч</td><td>190 000–300 000 ₽</td><td>01.10.2026</td><td>Диплом</td></tr>
+    <tr><td>🏆 ПК для госслужащих</td><td>108 ч</td><td>64 800 ₽</td><td>По набору</td><td>Удостоверение</td></tr>
+    <tr><td>🏆 ПК «Эффективность предприятий с ИИ»</td><td>108 ч</td><td>64 800 ₽</td><td>По набору</td><td>Удостоверение</td></tr>
+  </table>
+  <p><span class="tag">Выполнено</span> Продуктовая линейка сформирована, лид-магниты и трипваеры в разработке</p>
+</div>
+
+<h3>🔷 5. Упаковка соцсетей</h3>
+<div class="two-col">
+  <div class="card">
+    <div class="card-title">📱 Telegram</div>
+    <p>Канал @neurosphere_group работает</p>
+    <p><span class="tag">Выполнено</span> Контент-стратегия, рубрики, посты</p>
+  </div>
+  <div class="card">
+    <div class="card-title">📸 Instagram</div>
+    <p>Аккаунт @neurosphere_group</p>
+    <p><span class="tag">Выполнено</span> Визуал на 30 постов, рилс, сценарии</p>
+  </div>
+  <div class="card">
+    <div class="card-title">📘 VK</div>
+    <p>Группа vk.com/neurosphere_group</p>
+    <p><span class="tag">Выполнено</span> Блок Услуги, карточки, описание программ</p>
+  </div>
+  <div class="card">
+    <div class="card-title">💼 TenChat</div>
+    <p>Аккаунт Сергея</p>
+    <p><span class="tag">Выполнено</span> Описание профиля, рубрики, сценарии</p>
+  </div>
+</div>
+
+<h3>🔷 6. Подготовка лендингов</h3>
+<div class="card">
+  <div class="card-title">Сайт и страницы программ</div>
+  <ul>
+    <li><strong>neurosphere.group</strong> — основной сайт работает</li>
+    <li><strong>Нейро Хит:</strong> neurosphere.group/programs/business-ai — ✅</li>
+    <li><strong>ДПО:</strong> neurosphere.group/dpo — ✅</li>
+    <li><strong>Госслужащие:</strong> neurosphere.group/programs/gov-ai — ✅</li>
+    <li><strong>Все программы:</strong> neurosphere.group/programs — ✅</li>
+  </ul>
+  <p><span class="tag">Выполнено</span> Тексты лендингов для 3-х программ подготовлены</p>
+</div>
+
+<h3>🔷 7. Материалы для МГРИ</h3>
+<div class="card">
+  <ul>
+    <li>Описания 3-х программ для страниц сайта МГРИ — ✅</li>
+    <li>Пост о 1-й программе для соцсетей и сайта МГРИ — ✅</li>
+    <li>ТЗ на 3 ролика про университет — ✅</li>
+    <li>Презентация для конференции в МГРИ — ✅</li>
+    <li>Поток 26 мая (МГРИ) — ✅ прошёл</li>
+  </ul>
+</div>
+
+<h3>🔷 8. Партнёрская программа</h3>
+<div class="card">
+  <ul>
+    <li>Описание партнёрской программы для TenChat — ✅</li>
+    <li>Презентация и тексты — ✅</li>
+    <li>Приветственное видео (Сергей) — ✅</li>
+    <li>Оферта для партнёров на GetCourse — ✅</li>
+    <li>Пост в TenChat с упоминанием партнёрки — ✅</li>
+    <li>1-е письмо для партнёров GetCourse — ✅</li>
+    <li><strong>Алексей Задорин</strong> подтвердил готовность к партнёрству (ждёт звонка с 27.05!)</li>
+  </ul>
+</div>
+
+<h3>🔷 9. Дополнительные работы</h3>
+<div class="card">
+  <ul>
+    <li><span class="metric">✅</span> <strong>Образовательная лицензия получена</strong> — лендинг на GetCourse: macim.getcourse.ru</li>
+    <li><span class="metric">✅</span> <strong>Email-рассылка</strong> — цепочки писем подготовлены, база НейроСферы</li>
+    <li><span class="metric">✅</span> <strong>Лид-магниты:</strong> Гайд «50 промптов для бизнеса», Диагностическая сессия ИИ</li>
+  </ul>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 2: ТЕКУЩЕЕ СОСТОЯНИЕ ========== -->
+<h2>📊 Часть 2. Текущее состояние (01.06.2026)</h2>
+
+<h3>CRM и заявки</h3>
+<div class="card">
+  <table>
+    <tr><th>Показатель</th><th>Значение</th><th>Статус</th></tr>
+    <tr><td>Всего контактов</td><td>~25</td><td><span class="status-yellow">🟡</span></td></tr>
+    <tr><td>Статус учеников</td><td>9</td><td><span class="status-green">🟢</span></td></tr>
+    <tr><td>Горячие лиды (на обзвоне)</td><td>12 (4 гор. + 4 тёпл. + 4 холод.)</td><td><span class="status-yellow">🟡</span></td></tr>
+    <tr><td>Заявки за 17-29 мая</td><td>10+ (квиз, консультации, партнёрка)</td><td><span class="status-yellow">🟡</span></td></tr>
+    <tr><td>Партнёрская программа</td><td>1 агент (Алексей Задорин) — готов</td><td><span class="status-yellow">🟡</span></td></tr>
+    <tr><td>МГРИ</td><td>Партнёрство действует</td><td><span class="status-green">🟢</span></td></tr>
+  </table>
+</div>
+
+<h3>Продукт и контент</h3>
+<div class="two-col">
+  <div class="card">
+    <div class="card-title">🟢 Готово</div>
+    <ul>
+      <li>4 программы обучения</li>
+      <li>Сайт neurosphere.group</li>
+      <li>Образовательная лицензия</li>
+      <li>Партнёрство МГРИ</li>
+      <li>Контент-план соцсетей</li>
+      <li>Презентации (6 PDF)</li>
+      <li>Email-цепочки</li>
+      <li>Лид-магниты (гайд, диагностика)</li>
+      <li>Бот в Telegram работает</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">🟡 В работе / нужно доделать</div>
+    <ul>
+      <li>Старт потока 01.06 (Нейро Хит) 🔥</li>
+      <li>Кастдевы</li>
+      <li>Юнит-экономика</li>
+      <li>Автоворонка Telegram / VK</li>
+      <li>Реклама (Яндекс.Директ, таргет)</li>
+      <li>Вебинар/автовебинар</li>
+      <li>Дожим скрипты для партнёров</li>
+      <li>Лид-магниты под все 3 программы</li>
+    </div>
+  </div>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 3: СТРАТЕГИЯ РАЗВИТИЯ ========== -->
+<h2>🚀 Часть 3. Стратегия развития НейроСферы — 2026</h2>
+<p style="color: #888;">Цель: системный EdTech-проект с устойчивым потоком 20-30 заявок/мес, выход на 5-10 млн ₽/год</p>
+
+<h3>🎯 Видение</h3>
+<div class="blockquote">
+  НейроСфера — ведущая AI-академия в России с гос. дипломом, практическим обучением Context Engineering и реальными бизнес-кейсами. Каждый выпускник — готовый специалист с портфолио.
+</div>
+
+<h3>📌 Стратегические цели (2026-2027)</h3>
+<div class="two-col">
+  <div class="card">
+    <div class="card-title">📈 Ближайшие 3 месяца (июнь-август)</div>
+    <ul>
+      <li><span class="metric">🎯</span> Запустить поток Нейро Хит (8-10 учеников)</li>
+      <li><span class="metric">🎯</span> Настроить автоворонку: лид-магнит → трипваер → курс</li>
+      <li><span class="metric">🎯</span> Запустить вебинар по ИИ для бизнеса</li>
+      <li><span class="metric">🎯</span> Активировать партнёрскую программу (3-5 агентов)</li>
+      <li><span class="metric">🎯</span> Выход на 15-20 заявок/мес</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">📈 Среднесрочные 6-12 мес (сентябрь-май)</div>
+    <ul>
+      <li><span class="metric">🎯</span> Запуск ДПО (01.10.2026)</li>
+      <li><span class="metric">🎯</span> Программы для госслужащих и предприятий</li>
+      <li><span class="metric">🎯</span> 10+ партнёров-агентов</li>
+      <li><span class="metric">🎯</span> 30+ заявок/мес регулярно</li>
+      <li><span class="metric">🎯</span> Выход на 5-10 млн ₽/год</li>
+    </ul>
+  </div>
+</div>
+
+<h3>🔷 Этап 1 (июнь-июль) — Запуск и отладка</h3>
+<div class="phase-card phase1">
+  <p><strong>Приоритеты:</strong></p>
+  <ol>
+    <li><strong>🔥 Поток Нейро Хит (01.06)</strong> — провести обучение, откатать программу, собрать отзывы</li>
+    <li><strong>🤝 Звонок Алексею Задорину</strong> — первый партнёр ждёт с 27.05!</li>
+    <li><strong>📞 Обзвон горячих лидов:</strong> Андрей (+7 912 386-70), Кирилл (+7 937 902-32-48), Артём (+7 901 689-98-15)</li>
+    <li><strong>📧 Email-рассылка</strong> — запустить цепочки по базе</li>
+    <li><strong>🎥 Вебинар</strong> — подготовить и провести (темы: «10 ИИ-решений для бизнеса», «Context Engineering»)</li>
+  </ol>
+</div>
+
+<h3>🔷 Этап 2 (июль-август) — Маркетинг и масштабирование</h3>
+<div class="phase-card phase2">
+  <p><strong>Ключевые направления:</strong></p>
+  <ol>
+    <li><strong>Автоворонка Telegram:</strong> лид-магнит → бот → прогрев → продажа</li>
+    <li><strong>Реклама:</strong> Яндекс.Директ + таргет VK + TenChat</li>
+    <li><strong>Контент-маркетинг:</strong> ежедневные посты в Telegram, Instagram, VK, YouTube-канал</li>
+    <li><strong>Партнёрская программа:</strong> скрипты созвонов, МОП, 5+ агентов</li>
+    <li><strong>Квизы на сайте:</strong> доработка, увеличение конверсии</li>
+    <li><strong>Лид-магниты:</strong> гайд 50 промптов, диагностическая сессия, чек-лист аудита ИИ</li>
+  </ol>
+</div>
+
+<h3>🔷 Этап 3 (сентябрь-октябрь) — Укрепление</h3>
+<div class="phase-card phase3">
+  <p><strong>Подготовка к ДПО и расширение:</strong></p>
+  <ol>
+    <li><strong>ДПО — предпродажи (сентябрь)</strong> — старт 01.10, предварительный нагрев аудитории</li>
+    <li><strong>Госслужащие:</strong> запуск пилотного потока для госструктур</li>
+    <li><strong>Кейсы выпускников:</strong> собрать 5+ историй успеха для соцсетей</li>
+    <li><strong>Кастдевы:</strong> 10+ интервью с клиентами для уточнения УТП</li>
+    <li><strong>Юнит-экономика:</strong> CPA, LTV, ROI по каналам — прозрачность</li>
+  </ol>
+</div>
+
+<h3>🔷 Этап 4 (ноябрь-декабрь) — Стабильность</h3>
+<div class="phase-card phase4">
+  <p><strong>Выход на устойчивый режим:</strong></p>
+  <ol>
+    <li><strong>10+ учеников в месяц</strong> по всем программам</li>
+    <li><strong>Автовебинар</strong> — круглосуточная воронка продаж</li>
+    <li><strong>Партнёрская сеть:</strong> 10+ активных агентов</li>
+    <li><strong>Воронка полностью настроена:</strong> соцсети → лид-магнит → трипваер → курс</li>
+    <li><strong>План на 2027</strong> — дополнительные программы, B2B-корпоративное обучение</li>
+  </ol>
+</div>
+
+<h3>📊 Каналы привлечения</h3>
+<div class="card">
+  <table>
+    <tr><th>Канал</th><th>Статус</th><th>Приоритет</th><th>План</th></tr>
+    <tr><td>Яндекс.Директ</td><td><span class="status-yellow">🟡 тест</span></td><td>🔴 Высокий</td><td>Настроить, A/B тесты креативов</td></tr>
+    <tr><td>VK Таргет</td><td><span class="status-yellow">🟡 не настроен</span></td><td>🔴 Высокий</td><td>Запустить, тест ЦА</td></tr>
+    <tr><td>TenChat</td><td><span class="status-green">🟢 работает</span></td><td>🟡 Средний</td><td>Усилить контент, партнёрка</td></tr>
+    <tr><td>Telegram-канал</td><td><span class="status-green">🟢 работает</span></td><td>🟡 Средний</td><td>5 постов/нед, прогрев</td></tr>
+    <tr><td>Instagram</td><td><span class="status-yellow">🟡 неактивен</span></td><td>🟡 Средний</td><td>Рилс, посты, Stories</td></tr>
+    <tr><td>YouTube</td><td><span class="status-yellow">🟡 канал есть</span></td><td>🟢 Низкий</td><td>Разборы, обзоры, интервью</td></tr>
+    <tr><td>Партнёрская программа</td><td><span class="status-yellow">🟡 1 агент</span></td><td>🔴 Высокий</td><td>10+ агентов до ноября</td></tr>
+    <tr><td>Авито</td><td><span class="status-red">🔴 снято</span></td><td>🟢 Низкий</td><td>Пополнить аванс</td></tr>
+  </table>
+</div>
+
+<h3>📊 Прогноз финансов (ориентировочный)</h3>
+<div class="card">
+  <table>
+    <tr><th>Показатель</th><th>Текущий</th><th>Цель Q3</th><th>Цель Q4</th><th>Год 2026-27</th></tr>
+    <tr><td>Учеников/мес</td><td>0-2</td><td>5-8</td><td>10-15</td><td>100+</td></tr>
+    <tr><td>Средний чек</td><td>—</td><td>64 800 ₽</td><td>85 000 ₽</td><td>100 000 ₽</td></tr>
+    <tr><td>Выручка/мес</td><td>—</td><td>300-500к</td><td>800к-1,2 млн</td><td>8-12 млн</td></tr>
+    <tr><td>Заявок/мес</td><td>~10</td><td>15-20</td><td>20-30</td><td>стабильно 30+</td></tr>
+    <tr><td>Активных агентов</td><td>1</td><td>3-5</td><td>7-10</td><td>15+</td></tr>
+  </table>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 4: ПРОБЛЕМЫ И РИСКИ ========== -->
+<h2>⚠️ Часть 4. Проблемы и риски</h2>
+
+<div class="two-col">
+  <div class="card">
+    <div class="card-title">🔴 Критические</div>
+    <ul>
+      <li><strong>Нет кастдевов</strong> — решения принимаются без прямого общения с ЦА</li>
+      <li><strong>Нет юнит-экономики</strong> — непонятна эффективность каналов</li>
+      <li><strong>Старт потока 01.06</strong> — контент не готов, команда не собрана</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-title">🟡 Важные</div>
+    <ul>
+      <li><strong>Авито снято</strong> — нужно пополнить аванс</li>
+      <li><strong>Персонал</strong> — нет выделенного специалиста на обзвон/продажи</li>
+      <li><strong>Instagram неактивен</strong> — потеря канала</li>
+      <li><strong>Партнёр Задорин ждёт</strong> — просрочка 5 дней</li>
+    </ul>
+  </div>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 5: ПЛАН ДЕЙСТВИЙ (ЧТО ДЕЛАТЬ ЗАВТРА) ========== -->
+<h2>📋 Часть 5. План первоочередных действий</h2>
+
+<div class="card">
+  <ol>
+    <li><strong>☎️ Позвонить Алексею Задорину</strong> (79827177020) — первый партнёр, ждёт с 27 мая</li>
+    <li><strong>📞 Обзвонить горячих лидов:</strong> Андрей, Кирилл, Артём</li>
+    <li><strong>⚡ Подготовить контент для старта Нейро Хит</strong> — материалы, уроки, расписание</li>
+    <li><strong>🎥 Записать/провести вебинар</strong> — тема: 10 ИИ-решений для бизнеса</li>
+    <li><strong>💰 Пополнить аванс Авито</strong> — восстановить объявления</li>
+    <li><strong>📧 Запустить email-рассылку</strong> по базе НейроСферы</li>
+    <li><strong>📊 Настроить аналитику</strong> — откуда приходят лиды, конверсия</li>
+  </ol>
+</div>
+
+<p style="text-align: center; color: #555; margin-top: 60px; font-size: 0.85rem;">
+  Отчёт подготовлен: 01.06.2026 · НейроСфера (neurosphere.group)<br>
+  Данные: CRM, презентации (6 PDF), материалы Ольги, карточка компании
+</p>
+
+</div>
+</body>
+</html>
