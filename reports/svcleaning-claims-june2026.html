@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СВ-Клининг — Заявки и ответы</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e0e0e0; line-height: 1.6; padding: 32px; }
+.container { max-width: 1100px; margin: 0 auto; }
+h1 { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #289be5, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+.subtitle { color: #888; margin-bottom: 32px; }
+h2 { font-size: 1.3rem; font-weight: 700; color: #289be5; margin-top: 36px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #1e1e2e; }
+h3 { font-size: 1rem; font-weight: 600; color: #a5b4fc; margin-top: 20px; margin-bottom: 8px; }
+.card { background: #181825; border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #2a2a3a; }
+.card.tender { border-left: 4px solid #f59e0b; }
+.card.hot { border-left: 4px solid #ef4444; }
+.card.new { border-left: 4px solid #22c55e; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; margin: 2px; }
+.tag-blue { background: #1e3a5f; color: #93c5fd; }
+.tag-green { background: #065f46; color: #6ee7b7; }
+.tag-red { background: #7f1d1d; color: #fca5a5; }
+.tag-yellow { background: #713f12; color: #fcd34d; }
+.tag-purple { background: #3b0764; color: #d8b4fe; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9rem; }
+th { background: #1e1b4b; color: #93c5fd; padding: 10px 12px; text-align: left; font-weight: 600; }
+td { padding: 10px 12px; border-bottom: 1px solid #1e1e2e; }
+tr:nth-child(even) td { background: #14141f; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 6px; }
+p { margin-bottom: 8px; }
+.action-btn { display: inline-block; background: #6366f1; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin: 4px 4px 0 0; }
+.action-btn:hover { background: #818cf8; }
+.action-btn.green { background: #059669; }
+.action-btn.green:hover { background: #10b981; }
+.action-btn.amber { background: #d97706; }
+.action-btn.amber:hover { background: #f59e0b; }
+.blockquote { border-left: 3px solid #289be5; padding: 12px 16px; margin: 12px 0; background: #111122; border-radius: 0 8px 8px 0; color: #c4b5fd; font-size: 0.9rem; }
+.gradient-bar { height: 3px; background: linear-gradient(90deg, #289be5, #6366f1, #818cf8); border-radius: 2px; margin: 24px 0; }
+.contact-chip { display: inline-block; background: #1e1b4b; color: #a5b4fc; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin: 2px; }
+@media (max-width: 768px) { .two-col, .three-col { grid-template-columns: 1fr; } body { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🧹 СВ-Клининг — Сводка заявок</h1>
+<p class="subtitle">02.06.2026 · Все активные заявки, тендеры и запросы</p>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 1: ТЕНДЕРЫ ========== -->
+<h2>🔴 Тендеры (СРОЧНЫЕ)</h2>
+
+<div class="card tender">
+  <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap;">
+    <div>
+      <h3>🏗️ Тендер — ЖК «Пироговская Ривьера» (Мытищинский р-н)</h3>
+      <p><span class="tag tag-yellow">ТЕНДЕР</span> <span class="tag tag-red">СРОЧНО</span></p>
+    </div>
+    <div>
+      <span class="contact-chip">📅 02.06.2026</span>
+    </div>
+  </div>
+  <p><strong>Заказчик:</strong> ООО «ОБЩЕСТРОЙСТАНДАРТ», Виктория Басова</p>
+  <p><strong>Объект:</strong> Московская обл., Мытищинский р-н, д. Пирогово, ЖК «Пироговская Ривьера»</p>
+  <p><strong>Что требуется:</strong> Уборка территории стройки (школа/объекты)</p>
+  <p><strong>Условия:</strong> Инструмент, расходники, спецодежда, проживание, питание, разнос материалов — всё включить в смету. Сотрудники с разрешительными документами для Подмосковья. Участие в еженедельных техсовещаниях.</p>
+  <p><strong>Для участия:</strong> Заполнить ТКП (форма приложена), учредительные документы, карточка организации, референс-лист</p>
+  <div class="blockquote">
+    👤 Виктория Басова | +7 (993) 245-40-49 | +7 (495) 189-78-79 доб.2243 | v.basova@o-s-s.ru
+  </div>
+  <p><strong>Действие:</strong> Подготовить ТКП, собрать документы, ответить о намерении участия</p>
+</div>
+
+<div class="card tender">
+  <h3>🏗️ Тендер — Росэнергоатом (уборка помещений)</h3>
+  <p><span class="tag tag-yellow">ТЕНДЕР</span> <span class="tag tag-red">ДЕДЛАЙН 02.06 10:00</span></p>
+  <p><strong>Заказчик:</strong> АО «КОНСИСТ-ОС» (zakupki_kos@rosenergoatom.ru)</p>
+  <p><strong>Дедлайн:</strong> 02.06.2026 в 10:00 — <span class="tag tag-red">ПРОШЁЛ</span></p>
+</div>
+
+<div class="card tender">
+  <h3>🏗️ Тендер — шлифовка/полировка мрамора, Газпром</h3>
+  <p><span class="tag tag-yellow">ТЕНДЕР</span> <span class="tag tag-yellow">ЗАПРОС КП</span></p>
+  <p><strong>Организация:</strong> ООО «Газпром межрегионгаз Москва»</p>
+  <p><strong>Объект:</strong> пос. Газопровод, д. 101</p>
+  <p><strong>Объёмы:</strong></p>
+  <ul>
+    <li>Шлифовка мрамора — 356,2 м²</li>
+    <li>Кристаллизация мрамора — 356,2 м²</li>
+    <li>Полировка мрамора — 356,2 м²</li>
+    <li>Глубокая очистка полов — 117,6 м²</li>
+  </ul>
+  <div class="blockquote">
+    👤 Павел Петрович Солодкий | apavlov@fgi.ru (отдел закупок)
+  </div>
+</div>
+
+<h2>🔷 Заявки с сайтов (новые за 02.06)</h2>
+
+<div class="two-col">
+
+<div class="card new">
+  <h3>📬 Заявка на осмотр — Дубна</h3>
+  <p><span class="tag tag-blue">dubna.svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+  <p>Запись на осмотр</p>
+  <p><strong>Город:</strong> Дубна</p>
+</div>
+
+<div class="card new">
+  <h3>📬 Оставить заявку — Долгопрудный</h3>
+  <p><span class="tag tag-blue">dolgoprudnyy.svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+  <p><strong>Город:</strong> Долгопрудный</p>
+</div>
+
+<div class="card new">
+  <h3>📬 Запись на осмотр — Бронницы</h3>
+  <p><span class="tag tag-blue">bronnitsy.svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+  <p><strong>Город:</strong> Бронницы</p>
+</div>
+
+<div class="card new">
+  <h3>📬 Запись на осмотр — svcleaning.ru</h3>
+  <p><span class="tag tag-blue">svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+</div>
+
+<div class="card new">
+  <h3>📬 Запись на осмотр — svcleaning.ru (2)</h3>
+  <p><span class="tag tag-blue">svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+</div>
+
+<div class="card new">
+  <h3>📬 Калькулятор — Дарья, 200 м²</h3>
+  <p><span class="tag tag-blue">svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+  <p><strong>Клиент:</strong> Дарья, +790****5464</p>
+  <p><strong>Площадь:</strong> 200 м²</p>
+  <p><strong>Работы:</strong> Генеральная уборка</p>
+  <p><strong>Сумма:</strong> от 10 200 ₽</p>
+</div>
+
+<div class="card new">
+  <h3>📬 Запись на осмотр — Коломна</h3>
+  <p><span class="tag tag-blue">kolomna.svcleaning.ru</span> <span class="tag tag-green">НОВАЯ</span></p>
+  <p><strong>Город:</strong> Коломна</p>
+</div>
+
+</div>
+
+<!-- ========== ЧАСТЬ 2: ЗАПРОСЫ ========== -->
+<h2>📋 Крупные запросы (требуют просчёта)</h2>
+
+<div class="card hot">
+  <h3>🔴 Уборка чердака — 427 м² (Павлов Александр)</h3>
+  <p><span class="tag tag-red">ЖДЁТ КП</span> <span class="tag tag-yellow">СРОЧНО</span></p>
+  <p><strong>Объект:</strong> Москва, ул. Большая Никитская, д. 21/18, стр. 1</p>
+  <p><strong>Площадь:</strong> 427 м², 3-й этаж</p>
+  <p><strong>Работы:</strong> Уборка от мусора со сбором, выносом и вывозом</p>
+  <p><strong>Вывоз:</strong> Контейнерами 1-2 шт. по 8 м³ (свои)</p>
+  <p><strong>Режим:</strong> 8:00-20:00. Лифта нет. Парковка платная (включить в счёт)</p>
+  <div class="blockquote">
+    👤 Павлов Александр Владимирович | +7 (495) 771-69-00 доб. 668 | +7 (996) 858-01-63 | apavlov@fgi.ru<br>
+    📍 ПАО АК МОСЛИФТМОНТАЖ
+  </div>
+  <p><strong>Действие:</strong> Просчитать КП (уборка + вывоз мусора), отправить, звонить</p>
+</div>
+
+<div class="card hot">
+  <h3>🔴 Клиника ФораФарм — 195,2 м²</h3>
+  <p><span class="tag tag-red">ЖДЁТ РАСЧЁТ</span> <span class="tag tag-yellow">СРОК 02.06</span></p>
+  <p><strong>Контакты:</strong> Надежда Нефедова, +7(495) 138-03-33 доб. 4402, nefedova_na@fora-farm.ru</p>
+  <p><strong>Площадь:</strong> 195,2 м², 1-й этаж, 3 входа</p>
+  <p><strong>Работы:</strong> Чистовая уборка (окна, полы, шкафы, 2 с/у, 7 кабинетов)</p>
+  <p><strong>Окна:</strong> витринные (2), панорамные (3), запасной выход (2), маленькое (1)</p>
+  <p><strong>Срок:</strong> 29.05 или 02.06</p>
+</div>
+
+<div class="card new">
+  <h3>📩 Fix Price — очистка покрытий, 250 м²</h3>
+  <p><span class="tag tag-blue">НОВЫЙ</span></p>
+  <p><strong>Клиент:</strong> Анисимов Никита, NAnisimov@fix-price.ru</p>
+  <p><strong>Объект:</strong> 250 м², Нарофоминск</p>
+  <p><strong>Работы:</strong> Очистка покрытий</p>
+</div>
+
+<div class="card new">
+  <h3>📩 КС — уборка территории (есть ТЗ)</h3>
+  <p><span class="tag tag-blue">НОВЫЙ</span></p>
+  <p><strong>Контакты:</strong> info.krasad@mail.ru, 89055465402</p>
+  <p><strong>Статус:</strong> Есть ТЗ, нужен КП</p>
+</div>
+
+<div class="card new">
+  <h3>📩 Сов-Тех — пол терраццо</h3>
+  <p><span class="tag tag-blue">НОВЫЙ</span></p>
+  <p><strong>Власов Владислав:</strong> vo.vlasov@sov-teh.com, +7 916 475 68 11</p>
+  <p><strong>Работы:</strong> Клининг пола терраццо (есть ТЗ)</p>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 3: ПЛАН АВТОМАТИЗАЦИИ ========== -->
+<h2>🤖 План автоматизации (по вашему запросу)</h2>
+
+<div class="two-col">
+
+<div class="card">
+  <h3>1. Автоответы на заявки</h3>
+  <p>При каждом письме с сайта svcleaning.ru — автоматический ответ с благодарностью за обращение и запросом уточняющих деталей</p>
+  <p><strong>Шаблон автоответа:</strong></p>
+  <div class="blockquote" style="font-size: 0.8rem;">
+    Здравствуйте! Благодарим за обращение в СВ-Клининг.<br>
+    Ваша заявка принята. Для формирования точного КП уточните:<br>
+    1. Тип уборки<br>
+    2. Площадь<br>
+    3. Адрес<br>
+    4. Удобное время для осмотра<br>
+    Свяжемся в ближайшее время!<br>
+    +7 (495) 461-07-66 | info@svcleaning.ru
+  </div>
+</div>
+
+<div class="card">
+  <h3>2. Сбор контактов в CRM</h3>
+  <p>Все входящие заявки (почта, сайты, соцсети, Telegram-боты, Instagram, TikTok) → единая база:</p>
+  <ul>
+    <li>📧 Почта IMAP → парсинг</li>
+    <li>📱 Сайты (svcleaning.ru + поддомены)</li>
+    <li>🤖 Telegram-боты</li>
+    <li>📸 Instagram / TikTok / VK</li>
+  </ul>
+  <p>Автоматическая запись в CRM-файл</p>
+</div>
+
+<div class="card">
+  <h3>3. Telegram-бот для заявок</h3>
+  <p>Бот @Neurosphereiaai_bot уже работает. Настроить его на клининг:</p>
+  <ul>
+    <li>Приём заявок из Instagram/TikTok/VK</li>
+    <li>Автоматическое создание заявки в CRM</li>
+    <li>Уведомление вам в Telegram о новых заявках</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>4. Кросс-платформенность</h3>
+  <p>Instagram, TikTok, VK, TenChat, Telegram — везде единый стиль ответов:</p>
+  <ul>
+    <li>Унифицированное приветствие</li>
+    <li>Грамматический контроль (шаблоны)</li>
+    <li>Единый Tone of Voice</li>
+    <li>Сбор контактов → CRM</li>
+  </ul>
+</div>
+
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 4: ПОДРЯДЧИКИ ПО ГОРОДАМ ========== -->
+<h2>📍 Поиск подрядчиков — города Подмосковья</h2>
+
+<div class="card">
+  <p style="margin-bottom: 12px;"><strong>Список городов для поиска клининговых компаний-партнёров:</strong></p>
+  <div class="three-col">
+    <div>
+      <p><span class="tag tag-purple">СЕВЕР</span></p>
+      <ul>
+        <li>Дмитров</li>
+        <li>Дубна ✅ (есть сайт)</li>
+        <li>Талдом</li>
+        <li>Клин</li>
+        <li>Лобня</li>
+        <li>Химки</li>
+      </ul>
+    </div>
+    <div>
+      <p><span class="tag tag-purple">ВОСТОК</span></p>
+      <ul>
+        <li>Орехово-Зуево ⬅️</li>
+        <li>Шатура</li>
+        <li>Павловский Посад</li>
+        <li>Электросталь</li>
+        <li>Ногинск</li>
+        <li>Щёлково ✅ (есть заявки)</li>
+      </ul>
+    </div>
+    <div>
+      <p><span class="tag tag-purple">ЮГ / ЗАПАД</span></p>
+      <ul>
+        <li>Коломна ✅ (есть сайт)</li>
+        <li>Бронницы ✅ (есть сайт)</li>
+        <li>Воскресенск</li>
+        <li>Раменское</li>
+        <li>Подольск</li>
+        <li>Нарофоминск ✅</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top: 12px;">
+    <p><span class="tag tag-purple">ЦИТРУС / ДР.</span></p>
+    <ul>
+      <li>Сергиев Посад, Пушкино, Королёв, Мытищи, Балашиха, Люберцы, Чехов, Серпухов, Ступино, Волоколамск, Можайск, Руза, Истра, Солнечногорск</li>
+    </ul>
+  </div>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ========== ЧАСТЬ 5: ЧТО ДЕЛАТЬ (ПЛАН ДЕЙСТВИЙ) ========== -->
+<h2>⚡ План действий (сегодня-завтра)</h2>
+
+<div class="card">
+  <ol>
+    <li><strong>🔴 ТЕНДЕР Пироговская Ривьера</strong> — ответить Виктории Басовой о намерении участвовать, запросить форму ТКП, подготовить документы. Звонить 8-993-245-40-49</li>
+    <li><strong>🔴 ЧЕРДАК 427 м²</strong> — просчитать КП: уборка мусора + вывоз 1-2 контейнера 8м³ + платная парковка. Отправить письмо Павлову Александру (apavlov@fgi.ru)</li>
+    <li><strong>🔴 КЛИНИКА ФораФарм</strong> — доб. 4402, nefedova_na@fora-farm.ru — КП уже просрочен, срочно отправить</li>
+    <li><strong>🟡 ГАЗПРОМ (мрамор)</strong> — запросить уточнения у Солодкого или сразу дать КП на 356+117 м²</li>
+    <li><strong>🟡 Заявки с сайтов</strong> — автоответ-благодарность + звонок в течение часа</li>
+    <li><strong>🟡 Поиск подрядчиков</strong> — начать с городов, где уже есть заявки (Щёлково, Дубна, Коломна, Нарофоминск)</li>
+  </ol>
+</div>
+
+</div>
+</body>
+</html>
