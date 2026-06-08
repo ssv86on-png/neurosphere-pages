@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>НейроСфера — Еженедельный отчёт 1–8 июня 2026 + Стратегия</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #0a0a0f; color: #e0e0e0; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+  h1 { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, #6ee7b7, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 14px; margin-bottom: 40px; }
+  .section { margin-bottom: 48px; }
+  h2 { font-size: 22px; font-weight: 700; color: #6ee7b7; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #1a1a2e; }
+  h3 { font-size: 17px; font-weight: 600; color: #94a3b8; margin: 20px 0 10px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: #111118; border: 1px solid #1e1e2e; border-radius: 12px; padding: 20px; text-align: center; }
+  .stat-number { font-size: 32px; font-weight: 800; color: #6ee7b7; display: block; }
+  .stat-label { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+  .stat-card.red .stat-number { color: #ef4444; }
+  .stat-card.yellow .stat-number { color: #eab308; }
+  .stat-card.blue .stat-number { color: #3b82f6; }
+  .lead-list { list-style: none; }
+  .lead-list li { background: #111118; border: 1px solid #1e1e2e; border-radius: 10px; padding: 14px 18px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .lead-list .name { font-weight: 600; color: #e0e0e0; }
+  .lead-list .meta { font-size: 13px; color: #888; }
+  .lead-list .tag { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; white-space: nowrap; }
+  .tag-hot { background: #450a0a; color: #fca5a5; border: 1px solid #7f1d1d; }
+  .tag-warm { background: #451a03; color: #fdba74; border: 1px solid #7c2d12; }
+  .tag-critical { background: #450a0a; color: #fca5a5; border: 1px solid #7f1d1d; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+  .problem-card { background: #111118; border: 1px solid #1e1e2e; border-radius: 12px; padding: 18px; margin-bottom: 10px; }
+  .problem-card .severity { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; font-weight: 600; }
+  .severity-red { background: #450a0a; color: #fca5a5; }
+  .severity-yellow { background: #451a03; color: #fdba74; }
+  .metric { background: #111118; border: 1px solid #1e1e2e; border-radius: 10px; padding: 16px; margin-bottom: 8px; }
+  .metric .key { color: #94a3b8; font-size: 13px; }
+  .metric .value { font-size: 15px; font-weight: 600; margin-top: 2px; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .comp-card { background: #111118; border: 1px solid #1e1e2e; border-radius: 10px; padding: 16px; }
+  .comp-card h4 { font-size: 14px; color: #6ee7b7; margin-bottom: 10px; }
+  .comp-card ul { list-style: none; }
+  .comp-card ul li { font-size: 14px; color: #aaa; padding: 4px 0; border-bottom: 1px solid #1a1a2e; }
+  .action-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .action-item { background: #111118; border: 1px solid #1e1e2e; border-radius: 10px; padding: 14px; font-size: 14px; }
+  .action-item .priority { font-weight: 700; }
+  .priority-p1 { color: #ef4444; }
+  .priority-p2 { color: #eab308; }
+  .strategy-tip { border-left: 3px solid #3b82f6; background: #0d0d1a; padding: 14px 18px; margin: 10px 0; border-radius: 0 10px 10px 0; font-size: 14px; color: #bbb; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🧠 НейроСфера — Недельный отчёт</h1>
+<div class="subtitle">1–8 июня 2026 • Данные с сайта, почты, Клавы • На основе реальных заявок</div>
+
+<div class="section">
+  <h2>📊 Ключевые показатели</h2>
+  <div class="stat-grid">
+    <div class="stat-card blue">
+      <span class="stat-number">62</span>
+      <span class="stat-label">Всего контактов в CRM</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">20</span>
+      <span class="stat-label">Активных лидов (июнь)</span>
+    </div>
+    <div class="stat-card blue">
+      <span class="stat-number">28</span>
+      <span class="stat-label">Заявок с запуска (17 мая)</span>
+    </div>
+    <div class="stat-card yellow">
+      <span class="stat-number">2</span>
+      <span class="stat-label">Подтверждённых учеников на 25 июня</span>
+    </div>
+    <div class="stat-card red">
+      <span class="stat-number">12</span>
+      <span class="stat-label">Критических проблем</span>
+    </div>
+    <div class="stat-card blue">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Заявок/день (июнь)</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">12</span>
+      <span class="stat-label">Партнёрских контактов</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">9</span>
+      <span class="stat-label">Текущих учеников</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🔥 Заявки на обучение — июнь 2026</h2>
+  
+  <h3>🔴 Горячие (готовы начать сейчас)</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">Амир</span> <span class="meta">+7 (963) 175-70-09 — 3 заявки за 04.06</span></span> <span class="tag tag-hot">🔥 5-й день!</span></li>
+    <li><span><span class="name">Раян Исламов</span> <span class="meta">+7 (917) 383-30-42 — госслужащий</span></span> <span class="tag tag-hot">🔥 Гос</span></li>
+    <li><span><span class="name">Артём</span> <span class="meta">+7 (901) 689-98-15 — хочет диплом гос.образца</span></span> <span class="tag tag-hot">🔥 28.05</span></li>
+    <li><span><span class="name">Муслим</span> <span class="meta">+7 (965) 664-33-65 — ML/DL, готов сейчас</span></span> <span class="tag tag-hot">🔥</span></li>
+    <li><span><span class="name">Анна Пронина (Иваново)</span> <span class="meta">an.pronina@ivgoradm.ru — до 200 чел, 64 800 ₽</span></span> <span class="tag tag-hot">🔥 7-й день!</span></li>
+  </ul>
+
+  <h3>🟡 Тёплые (нуждаются в обработке)</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">Алексей</span> <span class="meta">+7 (921) 205-58-42 — ДПО + квиз, ИИ-консалтинг</span></span> <span class="tag tag-warm">02.06</span></li>
+    <li><span><span class="name">Евгения</span> <span class="meta">+7 (968) 898-39-38 — консультация</span></span> <span class="tag tag-warm">01.06</span></li>
+    <li><span><span class="name">Тимур</span> <span class="meta">+7 (924) 543-26-94 — консультация</span></span> <span class="tag tag-warm">06.06</span></li>
+    <li><span><span class="name">Елена</span> <span class="meta">+7 (981) 746-42-67 — использует ИИ, без бюджета</span></span> <span class="tag tag-warm">06.06</span></li>
+    <li><span><span class="name">Кирилл</span> <span class="meta">+7 (937) 902-32-48 — госслужащий</span></span> <span class="tag tag-warm">27.05</span></li>
+    <li><span><span class="name">Анастасия</span> <span class="meta">— ДПО Специалист по ИИ (190 000 ₽)</span></span> <span class="tag tag-warm">03.06</span></li>
+  </ul>
+
+  <h3>📋 Заявки с сайта за неделю</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">01.06 — Евгения</span> <span class="meta">Консультация, +7 (968) 898-39-38</span></span></li>
+    <li><span><span class="name">02.06 — Раян Исламов</span> <span class="meta">Квиз, госслужба</span></span></li>
+    <li><span><span class="name">02.06 — Алексей</span> <span class="meta">ДПО, +7 (921) 205-58-42</span></span></li>
+    <li><span><span class="name">02.06 — Анна Пронина</span> <span class="meta">Администрация Иваново</span></span></li>
+    <li><span><span class="name">03.06 — Ирина</span> <span class="meta">Квиз, +7 (953) 281-10-13</span></span></li>
+    <li><span><span class="name">04.06 — Амир (×3)</span> <span class="meta">3 заявки за день</span></span></li>
+    <li><span><span class="name">04.06 — Муслим</span> <span class="meta">Квиз, +7 (965) 664-33-65</span></span></li>
+    <li><span><span class="name">06.06 — Тимур</span> <span class="meta">Консультация, +7 (924) 543-26-94</span></span></li>
+    <li><span><span class="name">06.06 — Камила</span> <span class="meta">Квиз, +7 (916) 056-53-98</span></span></li>
+    <li><span><span class="name">06.06 — Елена</span> <span class="meta">Квиз, +7 (981) 746-42-67</span></span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🤝 Партнёрская программа</h2>
+  
+  <h3>✅ Подтвердили готовность — ждут действий</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">Алексей Задорин</span> <span class="meta">8 982 717-70-20 — TenChat, подтвердил 27.05</span></span> <span class="tag tag-critical">🔴 13 дней</span></li>
+    <li><span><span class="name">Ирина Канунникова</span> <span class="meta">irkanun@gmail.com — TenChat, готова с 18.05</span></span> <span class="tag tag-critical">🔴 21 день</span></li>
+  </ul>
+
+  <h3>🆕 Новые агенты (июнь)</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">Алёна Галадий</span> <span class="meta">+7 (928) 667-97-10 — TenChat 03.06</span></span> <span class="tag tag-warm">Не обработана</span></li>
+    <li><span><span class="name">Матвей Согрин</span> <span class="meta">+7 (908) 905-37-74 — TenChat 02.06</span></span> <span class="tag tag-warm">Не обработан</span></li>
+  </ul>
+
+  <p style="color:#666;font-size:14px;margin-top:12px;">Всего партнёров: 12. Из них 2 подтвердили (0 действий), 2 без ответа, 4 не обработаны, 4 ждут письма.</p>
+</div>
+
+<div class="section">
+  <h2>🆕 Корректировка стратегии — данные июня</h2>
+
+  <div class="comparison">
+    <div class="comp-card">
+      <h4>📄 Стратегия 02.06</h4>
+      <ul>
+        <li>~25 заявок всего, 2 ученика</li>
+        <li>Цель: 10-15 учеников на июнь</li>
+        <li>5 каналов привлечения</li>
+        <li>Без конкретных цифр по отказам</li>
+        <li>Упор: количество заявок</li>
+      </ul>
+    </div>
+    <div class="comp-card">
+      <h4>🔄 Корректировка (08.06)</h4>
+      <ul>
+        <li><strong>~28 заявок</strong> + 3 за неделю → динамика 4/день</li>
+        <li>Цель: <strong>8-12 учеников</strong> (реалистично)</li>
+        <li><strong>12 партнёров + 2 агента</strong> (новый канал!)</li>
+        <li><strong>60% заявок без бюджета</strong> — нужна сегментация</li>
+        <li>Упор: <strong>конверсия → качество</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="strategy-tip">
+    <strong>📌 Ключевое открытие недели:</strong> 6 из 10 заявок за последнюю неделю приходят с пометкой «без бюджета / бесплатные материалы». Это значит, что <strong>посадочная страница</strong> привлекает <strong>нецелевую аудиторию</strong> — нужно добавить фильтр стоимости перед заявкой или изменить оффер на входе.
+  </div>
+
+  <div class="strategy-tip">
+    <strong>📌 Второе открытие:</strong> Авито приносило заявки — но аванс кончился 11 дней назад, объявления сняты. Прирост заявок с сайта (квиз) частично компенсирует, но Авито — самый дешёвый канал. <strong>Приоритет: пополнить Авито.</strong>
+  </div>
+
+  <div class="strategy-tip">
+    <strong>📌 Рынок (данные июня):</strong> Цены на ИТ-образование в топ-вузах РФ выросли на 15-52% (МФТИ 1,014 млн ₽ +32%, МГТУ 699 тыс. +27%, ВШЭ 800 тыс. +36%). Только 3% соискателей готовы к работе с ИИ. Правительство РФ планирует массовое обучение. <strong>Позиционирование «доступный AI-диплом от МГРИ»</strong> становится ещё сильнее.
+  </div>
+
+  <h3>Скорректированные цели</h3>
+  <ul class="lead-list">
+    <li><span><span class="name">🎯 Цель 1</span> <span class="meta"><strong>8-12 учеников</strong> на поток 25 июня (было 10-15)</span></span></li>
+    <li><span><span class="name">🎯 Цель 2</span> <span class="meta"><strong>Пополнить Авито</strong> — восстановить канал</span></span></li>
+    <li><span><span class="name">🎯 Цель 3</span> <span class="meta"><strong>Обработать партнёрку</strong> — Задорин (13 дней!) и Irin Kan (21 день!)</span></span></li>
+    <li><span><span class="name">🎯 Цель 4</span> <span class="meta"><strong>Сегментировать заявки</strong> — платёжеспособные vs. бесплатные</span></span></li>
+    <li><span><span class="name">🎯 Цель 5</span> <span class="meta"><strong>Администрация Иваново</strong> — ответ Анне Прониной, КП с сертификатом</span></span></li>
+    <li><span><span class="name">🎯 Цель 6</span> <span class="meta"><strong>NPS-опрос первых учеников</strong> — собрать отзывы для МГРИ</span></span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>🔴 Критические проблемы</h2>
+
+  <div class="problem-card">
+    <div class="severity severity-red">🔴 P1</div>
+    <strong>Алексей Задорин — 13 дней не дозвонились</strong><br>
+    <span style="font-size:14px;color:#888;">Подтвердил готовность к сотрудничеству 27.05. Каждый день без звонка снижает лояльность на ~15%. Требует срочного контакта.</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-red">🔴 P1</div>
+    <strong>Irin Kan — 21 день без ответа</strong><br>
+    <span style="font-size:14px;color:#888;">«Готова работать» с 18.05. Вероятно, уже нашла другую партнёрскую программу или потеряла интерес.</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-red">🔴 P1</div>
+    <strong>Авито — объявления сняты 11-й день</strong><br>
+    <span style="font-size:14px;color:#888;">Аванс кончился 29.05. Авито — самый дешёвый канал привлечения, надо пополнить.</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-yellow">🟡 P2</div>
+    <strong>Амир — 3 заявки, 5-й день без обработки</strong><br>
+    <span style="font-size:14px;color:#888;">Горячий лид, 3 касания за день 04.06. Не отвечен.</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-yellow">🟡 P2</div>
+    <strong>Анна Пронина (Иваново) — 7-й день без ответа</strong><br>
+    <span style="font-size:14px;color:#888;">Администрация города, до 200 чел × 64 800 ₽ = до 1,3 млн ₽ (или по интенсиву до 3 млн ₽).</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-yellow">🟡 P2</div>
+    <strong>12 черновиков МГРИ — не отправлены с 14 мая</strong><br>
+    <span style="font-size:14px;color:#888;">25+ дней. Черновики готовы, не хватает утверждения.</span>
+  </div>
+  <div class="problem-card">
+    <div class="severity severity-yellow">🟡 P2</div>
+    <strong>14 учеников из списка Сергея — не обработаны</strong><br>
+    <span style="font-size:14px;color:#888;">Список от 24.05. Требуют звонков/писем.</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📈 Активность и каналы</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <span class="stat-number">42</span>
+      <span class="stat-label">Писем за неделю</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">17</span>
+      <span class="stat-label">Рабочих писем</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">12</span>
+      <span class="stat-label">Заявок с сайта (июнь)</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Агентских с TenChat</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">40%</span>
+      <span class="stat-label">Конверсия квиза в заявку</span>
+    </div>
+    <div class="stat-card red">
+      <span class="stat-number">0</span>
+      <span class="stat-label">Заявок с Авито (11 дней)</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>💡 Рекомендации на следующую неделю</h2>
+
+  <div class="action-grid">
+    <div class="action-item">
+      <span class="priority priority-p1">🔴 P1</span><br>
+      Позвонить Задорину и Irin Kan — партнёрская сеть теряет лояльность каждый день
+    </div>
+    <div class="action-item">
+      <span class="priority priority-p1">🔴 P1</span><br>
+      Пополнить Авито — восстановить самый дешёвый канал заявок
+    </div>
+    <div class="action-item">
+      <span class="priority priority-p2">🟡 P2</span><br>
+      Ответить Анне Прониной (Иваново) — КП с сертификатом МГРИ
+    </div>
+    <div class="action-item">
+      <span class="priority priority-p2">🟡 P2</span><br>
+      Сегментировать вход: добавить фильтр «есть бюджет» на посадочную
+    </div>
+    <div class="action-item">
+      <span class="priority priority-p2">🟡 P2</span><br>
+      Обработать Амира (3 заявки) и Раяна (госслужащий)
+    </div>
+    <div class="action-item">
+      <span class="priority priority-p2">🟡 P2</span><br>
+      Разослать 12 черновиков МГРИ — 25+ дней лежат
+    </div>
+  </div>
+</div>
+
+<div class="section" style="text-align:center;padding:32px 0;border-top:1px solid #1a1a2e;">
+  <p style="color:#666;font-size:14px;">
+    НейроСфера • Центр ИИ на базе МГРИ • neurosphere.group<br>
+    Отчёт сформирован: 8 июня 2026 • Данные: почта, CRM, сервер Клавы, сайт
+  </p>
+</div>
+
+</div>
+</body>
+</html>
