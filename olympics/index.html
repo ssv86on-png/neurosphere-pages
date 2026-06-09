@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AISTUDY — Олимпиады</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 16px 20px; border-bottom: 1px solid #2a2a4a; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 20px; font-weight: 700; color: #fff; }
+.header .sub { font-size: 13px; color: #888; margin-top: 2px; }
+.nav { display: flex; gap: 6px; padding: 12px 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nav button { flex-shrink: 0; padding: 8px 16px; border: 1px solid #333; border-radius: 20px; background: transparent; color: #aaa; font-size: 13px; cursor: pointer; transition: all .2s; }
+.nav button.active { background: #4a6cf7; border-color: #4a6cf7; color: #fff; }
+.nav button .count { font-size: 11px; color: #666; margin-left: 4px; }
+.nav button.active .count { color: rgba(255,255,255,.6); }
+.content { padding: 12px 16px 80px; }
+.section-title { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin: 16px 0 8px; }
+.problem-card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 16px; margin-bottom: 10px; cursor: pointer; transition: all .2s; }
+.problem-card:active { transform: scale(.98); }
+.problem-card .num { font-size: 12px; color: #4a6cf7; font-weight: 600; }
+.problem-card .title { font-size: 15px; color: #fff; margin: 4px 0 6px; }
+.problem-card .preview { font-size: 13px; color: #888; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.problem-detail { padding: 0 0 80px; }
+.problem-detail .back { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; color: #4a6cf7; font-size: 14px; cursor: pointer; }
+.problem-detail .back:hover { text-decoration: underline; }
+.problem-detail .card { background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; margin: 0 16px 12px; overflow: hidden; }
+.problem-detail .card-header { padding: 16px 16px 12px; border-bottom: 1px solid #2a2a4a; }
+.problem-detail .card-header .num { font-size: 12px; color: #4a6cf7; font-weight: 600; }
+.problem-detail .card-header .title { font-size: 18px; color: #fff; margin: 4px 0; }
+.problem-detail .card-header .section { font-size: 12px; color: #666; }
+.problem-detail .card-body { padding: 16px; }
+.problem-detail .card-body .label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.problem-detail .card-body .text { font-size: 14px; line-height: 1.6; color: #ccc; white-space: pre-wrap; font-family: 'SF Mono', 'Fira Code', monospace; }
+.problem-detail .card-body .text p { margin-bottom: 8px; }
+.problem-detail .card-body .solution { background: #0d0d1a; border-radius: 8px; padding: 12px; margin-top: 8px; }
+.problem-detail .card-body .solution pre { font-size: 13px; overflow-x: auto; color: #8bc34a; }
+.tabs { display: flex; gap: 0; margin: 0 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2a2a4a; }
+.tabs button { flex: 1; padding: 10px; background: #1a1a2e; border: none; color: #888; font-size: 13px; cursor: pointer; transition: all .2s; }
+.tabs button.active { background: #4a6cf7; color: #fff; }
+.tabs button:not(:last-child) { border-right: 1px solid #2a2a4a; }
+.content-tab { display: none; }
+.content-tab.active { display: block; }
+.search { margin: 0 16px 12px; position: relative; }
+.search input { width: 100%; padding: 10px 14px; background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 10px; color: #e0e0e0; font-size: 14px; outline: none; }
+.search input:focus { border-color: #4a6cf7; }
+.stats-bar { display: flex; gap: 16px; padding: 8px 16px; background: #1a1a2e; border-radius: 10px; margin: 0 16px 12px; }
+.stats-bar .stat { text-align: center; flex: 1; }
+.stats-bar .stat .val { font-size: 20px; font-weight: 700; color: #fff; }
+.stats-bar .stat .lbl { font-size: 11px; color: #666; }
+@media (prefers-color-scheme: light) {
+  body { background: #f5f5f8; color: #333; }
+  .header { background: #fff; border-bottom-color: #e0e0e0; }
+  .header h1 { color: #222; }
+  .problem-card { background: #fff; border-color: #e0e0e0; }
+  .problem-detail .card { background: #fff; border-color: #e0e0e0; }
+  .problem-detail .card-body .solution { background: #f0f0f5; }
+  .search input { background: #fff; border-color: #ddd; color: #333; }
+  .stats-bar { background: #fff; }
+  .stats-bar .stat .val { color: #222; }
+  .tabs button { background: #fff; color: #666; }
+  .tabs button.active { background: #4a6cf7; color: #fff; }
+  .nav button { color: #666; border-color: #ddd; }
+  .nav button.active { background: #4a6cf7; border-color: #4a6cf7; color: #fff; }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const CATEGORY_NAMES = {"Олимпиадное программирование": "olympic-taskbook", "Python / Веб-разработка": "dpo-taskbook", "Vibe Coding / Нейросети": "vibe-coding-taskbook"};
+
+let data = null;
+let currentCategory = "Олимпиадное программирование";
+let currentSection = null;
+let currentProblem = null;
+let currentTab = "condition";
+
+async function init() {
+  try {
+    const resp = await fetch('problems.json');
+    data = await resp.json();
+    render();
+  } catch(e) {
+    document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#888">Загрузка...</div>';
+    // fallback: data from inline
+    setTimeout(() => {
+      if (!data) {
+        document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#888">Не удалось загрузить задачи. Попробуйте позже.</div>';
+      }
+    }, 5000);
+  }
+}
+
+function render() {
+  if (!data) {
+    document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#888">Загрузка...</div>';
+    return;
+  }
+  if (currentProblem) return renderDetail();
+  const cats = Object.keys(data.problems);
+  const probs = data.problems[currentCategory] || [];
+  
+  let html = `
+    <div class="header"><h1>🏆 AISTUDY</h1><div class="sub">${data.meta.total} задач по программированию и AI</div></div>
+    <div class="stats-bar">
+      <div class="stat"><div class="val">${data.meta.total}</div><div class="lbl">Задач</div></div>
+      <div class="stat"><div class="val">${cats.length}</div><div class="lbl">Категорий</div></div>
+      <div class="stat"><div class="val">${Object.keys(groupBySection(probs)).length}</div><div class="lbl">Разделов</div></div>
+    </div>
+    <div class="nav">`;
+  for (const cat of cats) {
+    const cnt = data.problems[cat].length;
+    html += `<button class="${cat === currentCategory ? 'active' : ''}" onclick="switchCategory('${cat}')">${cat} <span class="count">${cnt}</span></button>`;
+  }
+  html += `</div>
+    <div class="search"><input type="text" placeholder="🔍 Поиск задач..." oninput="searchProblems(this.value)"></div>`;
+  
+  const sections = groupBySection(probs);
+  for (const [section, problems] of Object.entries(sections)) {
+    html += `<div class="section-title">${section} — ${problems.length} задач</div>`;
+    for (const p of problems) {
+      html += `<div class="problem-card" onclick="openProblem('${currentCategory}', '${section}', ${p.number})">
+        <div class="num">Задача №${p.number}</div>
+        <div class="title">${escapeHtml(p.title)}</div>
+        <div class="preview">${escapeHtml(p.condition.substring(0, 100))}</div>
+      </div>`;
+    }
+  }
+  html += '</div>';
+  document.getElementById('app').innerHTML = html;
+}
+
+function renderDetail() {
+  const p = currentProblem;
+  if (!p) return;
+  
+  let html = `
+    <div class="header"><h1>🏆 AISTUDY</h1><div class="sub">Задача №${p.number}</div></div>
+    <div class="back" onclick="closeProblem()">← К списку задач</div>
+    <div class="card">
+      <div class="card-header">
+        <div class="num">Задача №${p.number}</div>
+        <div class="title">${escapeHtml(p.title)}</div>
+        <div class="section">${escapeHtml(p.section)}</div>
+      </div>
+      <div class="tabs">
+        <button class="${currentTab === 'condition' ? 'active' : ''}" onclick="switchTab('condition')">Условие</button>
+        <button class="${currentTab === 'solution' ? 'active' : ''}" onclick="switchTab('solution')">Решение</button>
+        <button class="${currentTab === 'explanation' ? 'active' : ''}" onclick="switchTab('explanation')">Объяснение</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">`;
+  
+  if (currentTab === 'condition') {
+    html += `<div class="text">${escapeHtml(p.condition)}</div>`;
+  } else if (currentTab === 'solution') {
+    html += `<div class="label">Решение</div><div class="solution"><pre>${escapeHtml(p.solution)}</pre></div>`;
+  } else if (currentTab === 'explanation') {
+    html += `<div class="label">Объяснение</div><div class="text">${escapeHtml(p.explanation || 'Нет объяснения')}</div>`;
+  }
+  
+  html += `</div></div>`;
+  
+  // Навигация
+  const probs = data.problems[currentCategory] || [];
+  const idx = probs.findIndex(x => x.number === p.number && x.section === p.section);
+  html += `<div style="display:flex;gap:10px;padding:0 16px;margin-top:4px">
+    <button onclick="${idx > 0 ? `openProblemByIndex(${idx - 1})` : ''}" style="flex:1;padding:12px;border-radius:10px;border:1px solid #333;background:transparent;color:${idx > 0 ? '#4a6cf7' : '#555'};font-size:14px;${idx > 0 ? 'cursor:pointer' : ''}" ${idx <= 0 ? 'disabled' : ''}>← Предыдущая</button>
+    <button onclick="${idx < probs.length - 1 ? `openProblemByIndex(${idx + 1})` : ''}" style="flex:1;padding:12px;border-radius:10px;border:1px solid #333;background:transparent;color:${idx < probs.length - 1 ? '#4a6cf7' : '#555'};font-size:14px;${idx < probs.length - 1 ? 'cursor:pointer' : ''}" ${idx >= probs.length - 1 ? 'disabled' : ''}>Следующая →</button>
+  </div>
+  <div style="padding:12px 16px;text-align:center;color:#555;font-size:13px">
+    ${idx + 1} из ${probs.length}
+  </div>`;
+  
+  document.getElementById('app').innerHTML = html;
+}
+
+function groupBySection(problems) {
+  const sections = {};
+  for (const p of problems) {
+    const s = p.section || 'Разное';
+    if (!sections[s]) sections[s] = [];
+    sections[s].push(p);
+  }
+  return sections;
+}
+
+function switchCategory(cat) {
+  currentCategory = cat;
+  currentSection = null;
+  currentProblem = null;
+  render();
+}
+
+function openProblem(cat, section, num) {
+  currentCategory = cat;
+  currentSection = section;
+  currentProblem = data.problems[cat].find(p => p.number === num && p.section === section);
+  currentTab = 'condition';
+  render();
+}
+
+function openProblemByIndex(idx) {
+  const probs = data.problems[currentCategory] || [];
+  const p = probs[idx];
+  if (p) {
+    currentProblem = p;
+    currentTab = 'condition';
+    render();
+  }
+}
+
+function closeProblem() {
+  currentProblem = null;
+  render();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  render();
+}
+
+function searchProblems(query) {
+  const q = query.toLowerCase().trim();
+  if (!q) return render();
+  
+  const probs = data.problems[currentCategory] || [];
+  const filtered = probs.filter(p => 
+    p.title.toLowerCase().includes(q) || 
+    p.condition.toLowerCase().includes(q) ||
+    (p.solution || '').toLowerCase().includes(q) ||
+    (p.explanation || '').toLowerCase().includes(q)
+  );
+  
+  const sections = groupBySection(filtered);
+  let html = document.querySelector('.header')?.outerHTML || '';
+  html += `<div class="nav">`;
+  for (const cat of Object.keys(data.problems)) {
+    const cnt = data.problems[cat].length;
+    html += `<button class="${cat === currentCategory ? 'active' : ''}" onclick="switchCategory('${cat}')">${cat} <span class="count">${cnt}</span></button>`;
+  }
+  html += `</div>
+    <div class="search"><input type="text" placeholder="🔍 Поиск задач..." value="${escapeHtml(query)}" oninput="searchProblems(this.value)"></div>
+    <div style="padding:8px 16px;color:#888;font-size:13px">Найдено: ${filtered.length} задач</div>`;
+  
+  if (filtered.length === 0) {
+    html += `<div style="padding:40px;text-align:center;color:#555">Ничего не найдено</div>`;
+  } else {
+    for (const [section, problems] of Object.entries(sections)) {
+      html += `<div class="section-title">${section} — ${problems.length} задач</div>`;
+      for (const p of problems) {
+        html += `<div class="problem-card" onclick="openProblem('${currentCategory}', '${section}', ${p.number})">
+          <div class="num">Задача №${p.number}</div>
+          <div class="title">${escapeHtml(p.title)}</div>
+          <div class="preview">${escapeHtml(p.condition.substring(0, 100))}</div>
+        </div>`;
+      }
+    }
+  }
+  
+  document.getElementById('app').innerHTML = html;
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+init();
+</script>
+</body>
+</html>
