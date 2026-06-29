@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СВ-Клининг — КП офис 710 м²</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #1E293B; background: #fff; }
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+}
+
+/* ===== СТРАНИЦА 1: ТИТУЛ ===== */
+.page-1 {
+  background: linear-gradient(160deg, #F0FDF4 0%, #ECFDF5 30%, #F8F9FC 100%);
+  display: flex;
+  flex-direction: column;
+}
+.accent-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #059669, #10B981, #34D399);
+}
+.page-1-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50mm 30mm 35mm;
+}
+.badge {
+  display: inline-block;
+  background: #059669;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.page-1 h1 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #064E3B;
+  margin-bottom: 10px;
+}
+.page-1 h1 span { color: #059669; }
+.page-1-sub {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 22px;
+  max-width: 90%;
+}
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.tag {
+  padding: 5px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+.price-box {
+  padding: 22px 26px;
+  background: #064E3B;
+  border-radius: 14px;
+  color: #fff;
+}
+.price-box .plabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #A7F3D0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.price-box .pval {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+.price-box .pval span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #A7F3D0;
+}
+.price-box .pnote {
+  font-size: 12px;
+  color: #6EE7B7;
+  margin-top: 3px;
+}
+.page-1-foot {
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 16px;
+  padding-bottom: 10mm;
+  text-align: center;
+}
+
+/* ===== СТРАНИЦА 2: ДЕТАЛИ ===== */
+.page-2 {
+  background: #fff;
+  padding: 20mm 24mm 15mm;
+}
+.page-2 .accent-line {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #059669, #10B981, #34D399);
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #064E3B;
+  margin-bottom: 12px;
+}
+.section-title .emoji { margin-right: 6px; }
+
+.ogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.ocard {
+  padding: 12px 14px;
+  background: #F8F9FC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+}
+.ocard .k { font-size: 9px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+.ocard .v { font-size: 14px; font-weight: 700; color: #1E293B; }
+.ocard .s { font-size: 11px; color: #64748B; margin-top: 1px; }
+
+.sgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.scard {
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+}
+.scard .ic { font-size: 20px; margin-bottom: 4px; }
+.scard .t { font-size: 13px; font-weight: 700; color: #1E293B; margin-bottom: 3px; }
+.scard .d { font-size: 11px; color: #64748B; line-height: 1.5; }
+
+.terms-box {
+  padding: 16px 18px;
+  background: #064E3B;
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.terms-box h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #A7F3D0;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.titem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #ECFDF5;
+}
+.titem .ch { color: #34D399; font-weight: 700; }
+
+.bgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.bitem {
+  padding: 8px 12px;
+  background: #ECFDF5;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #065F46;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bitem .bi { font-size: 14px; }
+
+.cbar {
+  padding: 12px 16px;
+  background: #F1F5F9;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cbar .cn { font-size: 13px; font-weight: 700; color: #1E293B; }
+.cbar .ce { font-size: 11px; color: #64748B; }
+.cbar .cp { font-size: 13px; color: #059669; font-weight: 600; }
+
+.ff {
+  position: absolute;
+  bottom: 12mm;
+  left: 24mm;
+  right: 24mm;
+  font-size: 9px;
+  color: #94A3B8;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 8px;
+  text-align: center;
+}
+
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<!-- СТРАНИЦА 1 -->
+<div class="page page-1">
+  <div class="accent-line"></div>
+  <div class="page-1-content">
+    <div class="badge">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</div>
+    <h1>Клининг офиса<br><span>710 м²</span> в Imperia Tower</h1>
+    <div class="page-1-sub">
+      Ежедневное профессиональное обслуживание<br>
+      бизнес-центра класса А — под ключ
+    </div>
+    <div class="tags">
+      <span class="tag">🧹 ПН–ПТ 09:00–19:00</span>
+      <span class="tag">🌙 ПН–ПТ 20:00–00:00</span>
+      <span class="tag">📅 Еженедельная ПТ</span>
+      <span class="tag">🧴 Расходники включены</span>
+    </div>
+    <div class="price-box">
+      <div class="plabel">Стоимость обслуживания в месяц</div>
+      <div class="pval">290 000 <span>₽</span></div>
+      <div class="pnote">ИП, УСН, без НДС · Фиксировано на 12 месяцев</div>
+    </div>
+    <div class="page-1-foot">СВ-Клининг — 30 подрядчиков, 14 городов Московской области</div>
+  </div>
+</div>
+
+<!-- СТРАНИЦА 2 -->
+<div class="page page-2">
+  <div class="accent-line"></div>
+  
+  <div class="section-title"><span class="emoji">📋</span>Объект</div>
+  <div class="ogrid">
+    <div class="ocard">
+      <div class="k">Объект</div>
+      <div class="v">Imperia Tower, Москва-Сити</div>
+      <div class="s">Бизнес-центр класса А</div>
+    </div>
+    <div class="ocard">
+      <div class="k">Площадь</div>
+      <div class="v">710,37 м²</div>
+      <div class="s">Офисное помещение</div>
+    </div>
+    <div class="ocard">
+      <div class="k">Клиент</div>
+      <div class="v">Whitecliff</div>
+      <div class="s">Diana Organ</div>
+    </div>
+    <div class="ocard">
+      <div class="k">Дата КП</div>
+      <div class="v">24 июня 2026</div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="emoji">🕐</span>График работ</div>
+  <div class="sgrid">
+    <div class="scard">
+      <div class="ic">☀️</div>
+      <div class="t">Поддерживающая уборка</div>
+      <div class="d">ПН–ПТ, 09:00–19:00<br>В течение рабочего дня</div>
+    </div>
+    <div class="scard">
+      <div class="ic">🌙</div>
+      <div class="t">Комплексная уборка</div>
+      <div class="d">ПН–ПТ, 20:00–00:00<br>710 м², полный цикл</div>
+    </div>
+    <div class="scard">
+      <div class="ic">📅</div>
+      <div class="t">Еженедельная уборка</div>
+      <div class="d">Пятница, 20:00–00:00<br>Углублённая обработка</div>
+    </div>
+    <div class="scard">
+      <div class="ic">🧴</div>
+      <div class="t">Генеральная уборка</div>
+      <div class="d">СБ–ВС, обсуждается отдельно</div>
+    </div>
+  </div>
+
+  <div class="terms-box">
+    <h3>✅ Условия</h3>
+    <div class="titem"><span class="ch">✓</span> Расходные материалы и профессиональная химия — предоставляются</div>
+    <div class="titem"><span class="ch">✓</span> Замена уборщицы без доплат</div>
+    <div class="titem"><span class="ch">✓</span> Супервайзер и ежемесячный контроль качества</div>
+    <div class="titem"><span class="ch">✓</span> Фиксированная стоимость на 12 месяцев</div>
+    <div class="titem"><span class="ch">✓</span> Полный пакет закрывающих документов</div>
+  </div>
+
+  <div class="bgrid">
+    <div class="bitem"><span class="bi">🔒</span>Надёжность: 5+ лет на рынке</div>
+    <div class="bitem"><span class="bi">📊</span>Прозрачная отчётность</div>
+    <div class="bitem"><span class="bi">🔄</span>Быстрая замена сотрудников</div>
+    <div class="bitem"><span class="bi">📱</span>Онлайн-отчёты по уборке</div>
+  </div>
+
+  <div class="cbar">
+    <div>
+      <div class="cn">СВ-Клининг</div>
+      <div class="ce">info@svcleaning.ru · svcleaning.ru</div>
+    </div>
+    <div class="cp">+7 (495) 461-07-66</div>
+  </div>
+
+  <div class="ff">СВ-Клининг · ИП Сотаева Д.М. · УСН · +7 (495) 461-07-66 · info@svcleaning.ru</div>
+</div>
+
+</body>
+</html>
