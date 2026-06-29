@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Отчёт НейроСфера — Июнь 2026 для МГРИ</title>
+<title>НейроСфера — Отчёт за июнь 2026 для МГРИ</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,14 +12,9 @@ body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #e0e0e0; li
 h1 { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #818cf8, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
 h2 { font-size: 1.5rem; font-weight: 700; color: #818cf8; margin-top: 48px; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid #1e1e2e; }
 h3 { font-size: 1.15rem; font-weight: 600; color: #a5b4fc; margin-top: 28px; margin-bottom: 12px; }
-h4 { font-size: 1rem; font-weight: 600; color: #c4b5fd; margin-top: 20px; margin-bottom: 8px; }
 .subtitle { color: #888; font-size: 1rem; margin-bottom: 36px; }
 .card { background: #181825; border-radius: 12px; padding: 24px; margin-bottom: 16px; border: 1px solid #2a2a3a; }
 .card-title { font-weight: 600; font-size: 1.05rem; color: #c4b5fd; margin-bottom: 8px; }
-.metric { display: inline-block; background: #065f46; color: #6ee7b7; padding: 2px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
-.metric-red { background: #7f1d1d; color: #fca5a5; }
-.metric-yellow { background: #713f12; color: #fcd34d; }
-.metric-blue { background: #1e3a5f; color: #93c5fd; }
 .gradient-bar { height: 4px; background: linear-gradient(90deg, #6366f1, #818cf8, #a78bfa); border-radius: 2px; margin: 24px 0; }
 ul, ol { padding-left: 20px; }
 li { margin-bottom: 8px; }
@@ -28,14 +23,17 @@ table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9re
 th { background: #1e1b4b; color: #a5b4fc; padding: 10px 12px; text-align: left; font-weight: 600; }
 td { padding: 10px 12px; border-bottom: 1px solid #1e1e2e; }
 tr:nth-child(even) td { background: #14141f; }
+.tag-green { background: #065f46; color: #6ee7b7; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+.tag-yellow { background: #713f12; color: #fcd34d; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+.tag-red { background: #7f1d1d; color: #fca5a5; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
 .header-section { text-align: center; padding: 60px 0 40px; }
 .header-section .subtitle { color: #888; max-width: 600px; margin: 12px auto 0; }
 .alert { background: #1a1a2e; border: 1px solid #3b3b6e; border-radius: 12px; padding: 20px; margin: 16px 0; }
 .alert-title { color: #fca5a5; font-weight: 600; margin-bottom: 8px; }
 .updated-badge { display: inline-block; background: #065f46; color: #6ee7b7; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 8px; }
-.tag-green { background: #065f46; color: #6ee7b7; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
-.tag-yellow { background: #713f12; color: #fcd34d; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
-.tag-red { background: #7f1d1d; color: #fca5a5; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+.status-done { display: inline-block; background: #065f46; color: #6ee7b7; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; }
+.status-wip { display: inline-block; background: #713f12; color: #fcd34d; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; }
+.status-todo { display: inline-block; background: #7f1d1d; color: #fca5a5; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; }
 @media (max-width: 768px) { h1 { font-size: 1.8rem; } .container { padding: 20px 16px; } }
 </style>
 </head>
@@ -44,196 +42,179 @@ tr:nth-child(even) td { background: #14141f; }
 
 <div class="header-section">
   <h1>🧠 НейроСфера</h1>
-  <p class="subtitle">Полный отчёт за июнь 2026 · Для МГРИ (Михаил Владимирович Нагайцев)<br><span class="updated-badge">🔄 29 июня 2026</span></p>
+  <p class="subtitle">Отчёт за июнь 2026 · Для МГРИ (Михаил Владимирович Нагайцев)<br>
+  Встреча / планерка: системные данные, задачи, взаимодействие<br>
+  <span class="updated-badge">🔄 29 июня 2026</span></p>
 </div>
 
 <div class="gradient-bar"></div>
 
-<!-- ============ 1. ТЕКУЩЕЕ СОСТОЯНИЕ ПРОЕКТА ============ -->
-<h2>1. Текущее состояние проекта</h2>
+<!-- ============ 1. ЧТО СДЕЛАНО ============ -->
+<h2>1. Что сделано — задачи и результат</h2>
 
-<h3>1.1. Продуктовая линейка</h3>
 <div class="card">
   <table>
-    <tr><th>Программа</th><th>Часы</th><th>Цена</th><th>Старт</th><th>Статус</th></tr>
-    <tr><td>🏆 ПК «Нейро Хит»</td><td>108 ч</td><td>64 800 ₽</td><td>Перенесён</td><td><span class="tag-yellow">🟡 Готов, нужна группа</span></td></tr>
-    <tr><td>🏆 ДПО «Специалист по разработке ИИ»</td><td>312 ч</td><td>190 000–300 000 ₽</td><td>01.10.2026</td><td><span class="tag-yellow">🟡 Программа утверждена</span></td></tr>
-    <tr><td>🏆 ПК «ИИ для госслужащих»</td><td>108 ч</td><td>64 800 ₽</td><td>По набору</td><td><span class="tag-green">🟢 Утверждена МГРИ</span></td></tr>
-    <tr><td>🏆 ПК «Эффективность предприятий с ИИ»</td><td>108 ч</td><td>64 800 ₽</td><td>По набору</td><td><span class="tag-yellow">🟡 Программа есть</span></td></tr>
+    <tr><th>№</th><th>Задача</th><th>Статус</th><th>Результат</th></tr>
+    <tr><td>1</td><td><strong>CRM НейроСферы</strong></td><td><span class="status-done">✅</span></td><td>Единая база 95 контактов (обучение + партнёрка)</td></tr>
+    <tr><td>2</td><td><strong>Шаблоны ответов</strong></td><td><span class="status-done">✅</span></td><td>На обучение + партнёрскую программу — готовы и утверждены</td></tr>
+    <tr><td>3</td><td><strong>Автоответ на заявки</strong></td><td><span class="status-done">✅</span></td><td>Скрипт Python: проверка почты → шаблон → отправка → Sent</td></tr>
+    <tr><td>4</td><td><strong>Распределение агентов</strong></td><td><span class="status-done">✅</span></td><td>Гена: сбор заявок + черновики | Герман: проверка + отправка</td></tr>
+    <tr><td>5</td><td><strong>Рассылка партнёрам</strong></td><td><span class="status-done">✅</span></td><td>13 писем (TenChat), сохранены в Sent. Ответов пока нет</td></tr>
+    <tr><td>6</td><td><strong>Утверждённая программа ПК для госслужащих</strong></td><td><span class="status-done">✅</span></td><td>20 стр, 5 модулей, 108 ч — получена, загружена в CRM</td></tr>
+    <tr><td>7</td><td><strong>Утверждённая программа ДПО</strong></td><td><span class="status-done">✅</span></td><td>143 стр, 8 модулей, 312 ч, бизнес-кейсы с ROI</td></tr>
+    <tr><td>8</td><td><strong>Презентации (PDF)</strong></td><td><span class="status-done">✅</span></td><td>6 шт: Нейро Хит, ДПО, госслужащие, партнёрская, 10 решений</td></tr>
+    <tr><td>9</td><td><strong>Telegram-бот @Neurosphereiaai_bot</strong></td><td><span class="status-done">✅</span></td><td>Работает v8 — сбор заявок, квизы, консультации</td></tr>
+    <tr><td>10</td><td><strong>Квиз-попап на сайте</strong></td><td><span class="status-done">✅</span></td><td>2-3 регистрации/день</td></tr>
+    <tr><td>11</td><td><strong>Стратегический отчёт</strong></td><td><span class="status-done">✅</span></td><td>Опубликован на neurosphere-pages.vercel.app</td></tr>
+    <tr><td>12</td><td><strong>Кроны (18 шт)</strong></td><td><span class="status-done">✅</span></td><td>Все активны, ни одного сбоя</td></tr>
+    <tr><td>13</td><td><strong>Бэкапы агентов</strong></td><td><span class="status-done">✅</span></td><td>Герман, Гена, Клава, Gateway — архивы на почте</td></tr>
   </table>
 </div>
 
-<h3>1.2. Заявки и CRM</h3>
+<div class="gradient-bar"></div>
+
+<!-- ============ 2. ТЕКУЩЕЕ СОСТОЯНИЕ ПРОЕКТА ============ -->
+<h2>2. Текущее состояние проекта</h2>
+
+<h3>Продуктовая линейка</h3>
+<div class="card">
+  <table>
+    <tr><th>Программа</th><th>Часы</th><th>Статус</th></tr>
+    <tr><td>ПК «Нейро Хит»</td><td>108 ч</td><td><span class="tag-yellow">🟡 Готов, старт перенесён — нужна группа</span></td></tr>
+    <tr><td>ДПО «Специалист по разработке ИИ»</td><td>312 ч</td><td><span class="tag-yellow">🟡 Программа утверждена, старт 01.10.2026</span></td></tr>
+    <tr><td>ПК «ИИ для госслужащих»</td><td>108 ч</td><td><span class="tag-green">🟢 Утверждена МГРИ, 5 модулей</span></td></tr>
+    <tr><td>ПК «Эффективность предприятий с ИИ»</td><td>108 ч</td><td><span class="tag-yellow">🟡 Программа есть</span></td></tr>
+  </table>
+</div>
+
+<h3>Заявки и CRM</h3>
 <div class="card">
   <table>
     <tr><th>Показатель</th><th>Значение</th></tr>
-    <tr><td>Всего контактов в CRM</td><td><strong>95</strong> (64 обучение + 31 партнёрка)</td></tr>
-    <tr><td>Заявки с сайта и квизов (май-июнь)</td><td>~42 контакта</td></tr>
-    <tr><td>Горячих лидов</td><td>5-7</td></tr>
+    <tr><td>Всего контактов</td><td><strong>95</strong> (64 обучение + 31 партнёрка)</td></tr>
+    <tr><td>Горячие лиды</td><td>5-7</td></tr>
+    <tr><td>Регистрации в день</td><td>2-3</td></tr>
     <tr><td>Партнёры (TenChat, GetCourse)</td><td>15+</td></tr>
-    <tr><td>Регистрации/день</td><td>2-3</td></tr>
     <tr><td>Партнёрская программа</td><td><span class="tag-yellow">🟡 Требует автоматизации</span></td></tr>
   </table>
 </div>
 
-<h3>1.3. Каналы привлечения</h3>
-<div class="card">
-  <table>
-    <tr><th>Канал</th><th>Статус</th></tr>
-    <tr><td>Сайт neurosphere.group</td><td><span class="tag-green">🟢 Работает, квиз + форма захвата</span></td></tr>
-    <tr><td>Telegram-канал</td><td><span class="tag-green">🟢 Ежедневные посты</span></td></tr>
-    <tr><td>Telegram-бот @Neurosphereiaai_bot</td><td><span class="tag-green">🟢 Работает v8</span></td></tr>
-    <tr><td>GetCourse (macim.getcourse.ru)</td><td><span class="tag-yellow">🟡 Нужен API-ключ</span></td></tr>
-    <tr><td>Яндекс.Директ</td><td><span class="tag-yellow">🟡 Тест 53 тыс, CPA 174₽</span></td></tr>
-    <tr><td>TenChat</td><td><span class="tag-green">🟢 Активен</span></td></tr>
-    <tr><td>YouTube / VK / Дзен</td><td><span class="tag-yellow">🟡 Оформлены, контент эпизодически</span></td></tr>
-  </table>
-</div>
-
 <div class="gradient-bar"></div>
 
-<!-- ============ 2. НАПРАВЛЕНИЕ ГОССЛУЖАЩИХ ============ -->
-<h2>2. Направление госслужащих — ключевой приоритет</h2>
+<!-- ============ 3. НАПРАВЛЕНИЕ ГОССЛУЖАЩИХ ============ -->
+<h2>3. Направление госслужащих — ключевой приоритет</h2>
 
-<h3>2.1. Рыночная ситуация</h3>
+<h3>Рыночная ситуация</h3>
 <div class="card">
-  <p>Направление «ИИ для госслужащих» — практически пустая ниша. Крупные вузы (РАНХиГС, МГУ, ВШЭ) предлагают общие программы цифровой трансформации, но <strong>специализированного курса по практическому применению нейросетей для госслужащих с госдипломом почти нет ни у кого</strong>.</p>
-  <p>Текущие игроки: Нетология (не AI-специфична), Сбер AI (корпоративное обучение), Zerocoder (нет госдиплома).</p>
-  <p><strong>Преимущество НейроСферы + МГРИ:</strong> единственный продукт, сочетающий:</p>
+  <p>Практически пустая ниша. Крупные вузы (РАНХиГС, МГУ, ВШЭ) предлагают общие программы цифровой трансформации, но <strong>специализированного курса по ИИ для госслужащих с госдипломом нет ни у кого</strong>.</p>
+  <p><strong>Преимущество НейроСферы + МГРИ:</strong></p>
   <ul>
-    <li>AI-специализацию (промпт-инжиниринг, генеративный ИИ, Context Engineering)</li>
+    <li>AI-специализация (промпт-инжиниринг, генеративный ИИ, Context Engineering)</li>
     <li>Госдиплом МГРИ (удостоверение ПК, засчитывается в КПК по 79-ФЗ)</li>
-    <li>Безопасность (модуль по ПДн и служебной информации)</li>
+    <li>Модуль безопасности (ПДн, служебная информация)</li>
     <li>Полностью дистанционный формат</li>
+    <li>Нацпроект «Экономика данных» — ИИ-грамотность становится обязательной</li>
   </ul>
 </div>
 
-<h3>2.2. Спрос и подтверждённые заявки</h3>
-<div class="card">
-  <ul>
-    <li><strong>Исламов Раян</strong> — госслужащий, готов начать «хоть завтра», группа от 50 чел (есть заявка от 03.06.2026)</li>
-    <li><strong>Анна Пронина (Иваново)</strong> — контакт есть, администрация города</li>
-    <li>Нацпроект «Экономика данных» — ИИ-грамотность становится обязательной компетенцией госслужащих</li>
-    <li>79-ФЗ требует повышения квалификации — бюджетное финансирование</li>
-  </ul>
-</div>
-
-<h3>2.3. Линейка продуктов для госслужащих</h3>
-<div class="card">
-  <table>
-    <tr><th>Продукт</th><th>Формат</th><th>Цена</th><th>Цель</th></tr>
-    <tr><td><strong>1. Базовый видеокурс «Нейросети для госслужащих»</strong></td><td>Короткое видео (1-2 ч), онлайн, автономно</td><td>~1 000 ₽</td><td>Массовый охват, лидогенерация</td></tr>
-    <tr><td><strong>2. Полный курс ПК «ИИ для госслужащих»</strong></td><td>108 ч, 5 модулей, дистанционно, сертификат МГРИ</td><td>64 800 ₽</td><td>Основной продукт B2G</td></tr>
-    <tr><td><strong>3. Промпт-инжиниринг + AI-агенты</strong></td><td>Короткий интенсив (1 урок), развёртывание агентов</td><td>По запросу</td><td>Доп. услуга</td></tr>
-    <tr><td><strong>4. Вебинар от преподавателя</strong></td><td>Live, Q&A, демонстрация</td><td>Бесплатно / в составе</td><td>Прогрев, конверсия</td></tr>
-  </table>
-</div>
-
-<h3>2.4. Структура полного курса (108 ч, 5 модулей)</h3>
+<h3>Структура курса (108 ч, 5 модулей)</h3>
 <div class="card">
   <table>
     <tr><th>Модуль</th><th>Часы</th><th>Содержание</th></tr>
-    <tr><td>Модуль 1. Основы ИИ и цифровая трансформация госуправления</td><td>20 ч</td><td>Понятия ИИ, направления, электронное правительство, суперсервисы, возможности и ограничения</td></tr>
-    <tr><td>Модуль 2. Генеративный ИИ и LLM</td><td>24 ч</td><td>Принципы работы нейросетей, контекст, температура, типовые задачи, верификация ответов</td></tr>
-    <tr><td>Модуль 3. Промпт-инжиниринг</td><td>24 ч</td><td>Zero-shot, few-shot, Chain-of-Thought, Role prompting, библиотека промптов</td></tr>
-    <tr><td>Модуль 4. Правовые аспекты и безопасность</td><td>20 ч</td><td>ПДн, служебная информация, риски утечки, безопасные промпты, локальный регламент</td></tr>
-    <tr><td>Модуль 5. Практические кейсы для госсектора</td><td>20 ч</td><td>Обращения граждан, аналитические документы, НПА, итоговая библиотека промптов</td></tr>
+    <tr><td>Модуль 1. Основы ИИ и цифровая трансформация госуправления</td><td>20 ч</td><td>Понятия ИИ, направления, электронное правительство, суперсервисы</td></tr>
+    <tr><td>Модуль 2. Генеративный ИИ и LLM</td><td>24 ч</td><td>Принципы работы, типовые задачи, верификация ответов, шаблоны текстов</td></tr>
+    <tr><td>Модуль 3. Промпт-инжиниринг</td><td>24 ч</td><td>Zero-shot, few-shot, Chain-of-Thought, библиотека промптов для госсектора</td></tr>
+    <tr><td>Модуль 4. Правовые аспекты и безопасность</td><td>20 ч</td><td>ПДн, служебная информация, риски утечки, безопасные промпты</td></tr>
+    <tr><td>Модуль 5. Практические кейсы для госсектора</td><td>20 ч</td><td>Обращения граждан, аналитика, НПА, итоговая библиотека промптов</td></tr>
   </table>
-  <p style="margin-top: 12px; color: #93c5fd;"><strong>Ключевая особенность:</strong> Все 108 часов — практика на реальных рабочих примерах госслужащего. Не теория — а готовые шаблоны и решения.</p>
+  <p style="margin-top: 12px; color: #93c5fd;"><strong>Ключевое:</strong> все 108 часов — практика на реальных рабочих примерах госслужащего. Не теория — готовые шаблоны и решения.</p>
 </div>
 
 <div class="gradient-bar"></div>
 
-<!-- ============ 3. ПРОДЕЛАННАЯ РАБОТА ЗА ИЮНЬ ============ -->
-<h2>3. Что сделано за июнь</h2>
+<!-- ============ 4. КАНАЛЫ ПРОДВИЖЕНИЯ ============ -->
+<h2>4. Каналы продвижения — стандартные и новые</h2>
+
+<h3>Стандартные каналы МГРИ — возможность запуска</h3>
+<div class="card">
+  <p>Обсуждается возможность использования существующих каналов продвижения МГРИ для набора групп на ДПО. Вопросы к проработке:</p>
+  <ul>
+    <li><strong>Сайт МГРИ</strong> — размещение программ на портале вуза</li>
+    <li><strong>Рассылка МГРИ</strong> — по базе выпускников и слушателей ДПО</li>
+    <li><strong>Соцсети МГРИ</strong> — анонсы в официальных каналах</li>
+    <li><strong>Скидка для первых групп</strong> — спецпредложение при запуске нового набора</li>
+    <li><strong>Совместные мероприятия</strong> — дни открытых дверей, вебинары</li>
+    <li><strong>Партнёрские программы вуза</strong> — через существующих партнёров МГРИ</li>
+  </ul>
+</div>
+
+<h3>Собственные каналы НейроСферы</h3>
+<div class="card">
+  <table>
+    <tr><th>Канал</th><th>Статус</th></tr>
+    <tr><td>Сайт neurosphere.group + квиз</td><td><span class="tag-green">✅ Работает, 2-3 рег/день</span></td></tr>
+    <tr><td>Telegram-канал @neurosphere_group</td><td><span class="tag-green">✅ Активен, ежедневные посты</span></td></tr>
+    <tr><td>Telegram-бот @Neurosphereiaai_bot</td><td><span class="tag-green">✅ Работает v8</span></td></tr>
+    <tr><td>Яндекс.Директ</td><td><span class="tag-green">✅ Протестирован (53 тыс, CPA 174₽)</span></td></tr>
+    <tr><td>TenChat</td><td><span class="tag-green">✅ Активен, база партнёров</span></td></tr>
+    <tr><td>YouTube</td><td><span class="tag-yellow">🟡 Канал создан, контент — план</span></td></tr>
+    <tr><td>VK</td><td><span class="tag-yellow">🟡 Оформлен, контент эпизодически</span></td></tr>
+    <tr><td>Дзен</td><td><span class="tag-yellow">🟡 Оформлен</span></td></tr>
+  </table>
+</div>
+
+<h3>Подкасты и эфиры — системный подход</h3>
+<div class="card">
+  <p>Обсуждалось направление — ведение подкастов на тему нейросетей:</p>
+  <ul>
+    <li><strong>С разработчиками</strong> — интервью с архитекторами AI-решений</li>
+    <li><strong>С подрядчиками</strong> — кто внедряет ИИ в реальном секторе</li>
+    <li><strong>С обучающими на платформе</strong> — кейсы учеников, истории успеха</li>
+    <li><strong>Стабильный выход в эфир</strong> — по расписанию, системно, не разово</li>
+  </ul>
+</div>
+
+<div class="gradient-bar"></div>
+
+<!-- ============ 5. ЗАДАЧИ ============ -->
+<h2>5. Задачи — что требуется для системной работы</h2>
 
 <div class="card">
   <table>
-    <tr><th>Блок работ</th><th>Статус</th><th>Результат</th></tr>
-    <tr><td>CRM-система НейроСферы</td><td><span class="tag-green">✅</span></td><td>Собрана единая CRM: 95 контактов (XLSX, JSON, CSV)</td></tr>
-    <tr><td>Шаблоны ответов на заявки</td><td><span class="tag-green">✅</span></td><td>Обучение + партнёрка — готовы, утверждены</td></tr>
-    <tr><td>Автоответ на заявки (скрипт)</td><td><span class="tag-green">✅</span></td><td>Python-скрипт, SMTP через mail.ru, сохранение в Sent</td></tr>
-    <tr><td>Распределение агентов</td><td><span class="tag-green">✅</span></td><td>Гена → черновики, Герман → проверка/отправка</td></tr>
-    <tr><td>Партнёрские письма</td><td><span class="tag-green">✅</span></td><td>Отправлены 13 партнёрам (29.06.2026)</td></tr>
-    <tr><td>Утверждённая программа ПК для госслужащих</td><td><span class="tag-green">✅</span></td><td>Получена с почты, загружена в CRM (20 стр, 5 модулей)</td></tr>
-    <tr><td>Утверждённая программа ДПО</td><td><span class="tag-green">✅</span></td><td>143 стр, 8 модулей, бизнес-кейсы с ROI</td></tr>
-    <tr><td>GetCourse — посадочные страницы</td><td><span class="tag-yellow">🟡</span></td><td>3 программы загружены, нужен API-ключ для оплаты</td></tr>
-    <tr><td>Яндекс.Директ — тест</td><td><span class="tag-yellow">🟡</span></td><td>53 520₽ бюджет, CPA 174₽, лучшая — госслужащие (CPA 5₽)</td></tr>
-    <tr><td>Telegram-бот v8</td><td><span class="tag-green">✅</span></td><td>Работает, обрабатывает заявки</td></tr>
-    <tr><td>Автоворонка v9</td><td><span class="tag-yellow">🟡</span></td><td>Концепция готова, реализация ждёт ключа GetCourse</td></tr>
-    <tr><td>Презентации (PDF)</td><td><span class="tag-green">✅</span></td><td>6 шт: Нейро Хит, ДПО, госслужащие, партнёрская, 10 решений</td></tr>
-    <tr><td>Стратегический отчёт (HTML)</td><td><span class="tag-green">✅</span></td><td>Опубликован на neurosphere-pages.vercel.app</td></tr>
-    <tr><td>Олимпиадный задачник</td><td><span class="tag-yellow">🟡</span></td><td>926 задач, требуется доработка (wipe-кодинг)</td></tr>
+    <tr><th>№</th><th>Задача</th><th>Статус</th><th>Что нужно</th></tr>
+    <tr><td>1</td><td><strong>Договор с МГРИ</strong></td><td><span class="status-todo">🔴</span></td><td>Зафиксировать %, условия, сроки. Кто подписывает? Встреча</td></tr>
+    <tr><td>2</td><td><strong>Линейка госслужащих</strong></td><td><span class="status-wip">🟡</span></td><td>4 продукта: видеокурс, ПК, промпт-инжиниринг, вебинар. Назначить преподавателя</td></tr>
+    <tr><td>3</td><td><strong>Каналы МГРИ</strong></td><td><span class="status-todo">🔴</span></td><td>Решить — можно ли использовать сайт, рассылку, соцсети вуза для набора на ДПО</td></tr>
+    <tr><td>4</td><td><strong>Преподаватели</strong></td><td><span class="status-todo">🔴</span></td><td>Стефанюк или другой. Записать вебинар «о себе, курсе, возможностях»</td></tr>
+    <tr><td>5</td><td><strong>Дистанционный курс</strong></td><td><span class="status-todo">🔴</span></td><td>Запись видеоуроков, тесты, сертификаты, автономная продажа</td></tr>
+    <tr><td>6</td><td><strong>Подкасты и эфиры</strong></td><td><span class="status-todo">🔴</span></td><td>Системный график, темы, ведущие. С кого начинаем?</td></tr>
+    <tr><td>7</td><td><strong>Вопросы от Ольги</strong></td><td><span class="status-wip">🟡</span></td><td>Структура курса, дидактика, преподаватели, видео, диплом — нужны ответы</td></tr>
+    <tr><td>8</td><td><strong>Взаимодействие систем и данных</strong></td><td><span class="status-wip">🟡</span></td><td>Наладить обмен между системами: CRM, почта, бот, отчёты. Единая картина</td></tr>
+    <tr><td>9</td><td><strong>Планерка / встреча официальная</strong></td><td><span class="status-todo">🔴</span></td><td>Нужен протокол, список задач, ответственные, сроки. Когда встреча?</td></tr>
   </table>
 </div>
 
 <div class="gradient-bar"></div>
 
-<!-- ============ 4. ПРОБЛЕМЫ И РИСКИ ============ -->
-<h2>4. Проблемы и риски</h2>
-
+<!-- ============ 6. ЧТО НЕ СДЕЛАНО ============ -->
+<h2>6. Что не сделано</h2>
 <div class="card">
-  <div class="alert">
-    <div class="alert-title">🔴 Договор с МГРИ</div>
-    <p>Не подписан окончательно. Условия сотрудничества (%), объём, сроки — требуют фиксации. Без договора невозможен полноценный запуск коммерческих потоков.</p>
-  </div>
-  <div class="alert">
-    <div class="alert-title">🔴 GetCourse — нет API-ключа</div>
-    <p>Приём оплат вручную. Автоворонка и партнёрская программа не работают без интеграции.</p>
-  </div>
-  <div class="alert">
-    <div class="alert-title">🟡 Преподаватели</div>
-    <p>Для записи курса нужны преподаватели. Стефанюк или другой — вопрос. Материалы и дидактика не структурированы до конца.</p>
-  </div>
-  <div class="alert">
-    <div class="alert-title">🟡 Контент для госслужащих</div>
-    <p>Нет записанных видеоуроков, вебинаров, тестов. Всё требуется создавать с нуля под госспецифику.</p>
-  </div>
-  <div class="alert">
-    <div class="alert-title">🟡 Ольга — недопонимания</div>
-    <p>Вопросы от операционного директора (Ольги) по структуре курса, преподавателям, диплому, видео — требуют ответов.</p>
-  </div>
-</div>
-
-<div class="gradient-bar"></div>
-
-<!-- ============ 5. ФИНАНСОВАЯ МОДЕЛЬ ============ -->
-<h2>5. Финансовая модель</h2>
-
-<div class="card">
-  <table>
-    <tr><th>Показатель</th><th>ПК (25/мес)</th><th>ДПО (50/год)</th><th>Итого</th></tr>
-    <tr><td>Выручка</td><td>19 440 000 ₽</td><td>12 250 000 ₽</td><td><strong>31 690 000 ₽</strong></td></tr>
-    <tr><td>Вуз (50%)</td><td>9 720 000 ₽</td><td>6 125 000 ₽</td><td><strong>15 845 000 ₽</strong></td></tr>
-    <tr><td>Продажник (5%)</td><td>972 000 ₽</td><td>612 500 ₽</td><td>1 584 500 ₽</td></tr>
-    <tr><td>Реклама (8%)</td><td>1 555 200 ₽</td><td>980 000 ₽</td><td>2 535 200 ₽</td></tr>
-    <tr><td>Налоги (6%)</td><td>1 166 400 ₽</td><td>735 000 ₽</td><td>1 901 400 ₽</td></tr>
-    <tr><td><strong>Чистые (31%)</strong></td><td><strong>6 026 400 ₽</strong></td><td><strong>3 797 500 ₽</strong></td><td><strong>9 823 900 ₽</strong></td></tr>
-  </table>
-</div>
-
-<div class="gradient-bar"></div>
-
-<!-- ============ 6. ПЛАН ============ -->
-<h2>6. План первоочередных действий</h2>
-
-<div class="card">
-  <ol>
-    <li><strong>Подписать договор с МГРИ</strong> — зафиксировать %, условия, сроки</li>
-    <li><strong>Сформировать линейку для госслужащих</strong> — 4 продукта (видео 1000₽, полный курс, промпт-инжиниринг, вебинар)</li>
-    <li><strong>Назначить преподавателя</strong> — Стефанюк или другой. Записать вебинар</li>
-    <li><strong>Создать дидактические материалы</strong> — тесты, задачи, кейсы для госсектора</li>
-    <li><strong>Ответить на вопросы Ольги</strong> — структура курса, преподаватели, видео, диплом</li>
-    <li><strong>Запустить GetCourse</strong> — получить API-ключ, настроить оплату</li>
-    <li><strong>Приступить к записи курса</strong> — дистанционный формат, сертификаты, автономная продажа</li>
-  </ol>
+  <ul>
+    <li><span class="status-todo">🔴</span> <strong>Договор с МГРИ</strong> — не подписан, условия не определены</li>
+    <li><span class="status-todo">🔴</span> <strong>Преподаватели</strong> — не назначены</li>
+    <li><span class="status-todo">🔴</span> <strong>Видеокурс для госслужащих</strong> — нет контента, не записан</li>
+    <li><span class="status-todo">🔴</span> <strong>Дидактические материалы</strong> — тесты, задачи, кейсы не структурированы</li>
+    <li><span class="status-todo">🔴</span> <strong>Каналы МГРИ</strong> — не решено, можно ли использовать</li>
+    <li><span class="status-todo">🔴</span> <strong>Автоворонка продаж</strong> — концепция есть, реализации нет</li>
+    <li><span class="status-wip">🟡</span> <strong>Олимпиадный задачник</strong> — 926 задач, требуется wipe-кодинг (уникализация)</li>
+  </ul>
 </div>
 
 <div class="gradient-bar"></div>
 
 <p style="text-align: center; color: #666; font-size: 0.85rem; padding: 20px 0;">
   Отчёт подготовлен: 29.06.2026 · НейроСфера (neurosphere.group)<br>
-  Партнёр: МГРИ · Контакт: Михаил Владимирович Нагайцев<br>
+  Партнёр: МГРИ · Контакт: Михаил Владимирович Нагайцев, Ольга Вандышева<br>
   <span class="updated-badge">🔄 Версия от 29 июня 2026</span>
 </p>
 
